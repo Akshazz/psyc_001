@@ -33,13 +33,7 @@
 </div> 
 
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">Hi there!</h1>
-  <p class="intro"> We’re excited to help you enhance your emotional intelligence, focusing on key areas like empathy, social skills, self-awareness, and self-regulation. Our AI-based training website is designed to provide you with personalized support and practical tools to help you grow. Together, we can work on boosting your EI and empowering you to navigate life’s challenges with greater confidence. </p>
-<hr>
-<br>
-
-  <a class="start" href="start.php">Get Started</a>
+<header class="w3-container w3-black w3-center" style="padding:120px 16px">
 </header>
 
 <div class= 'container'>
@@ -47,34 +41,88 @@
 <div class="container_content_inner">
 <div class="title">
     <br>
-  <h1>Hi there!</h1>
+  <h1>Choose your best!</h1>
 </div>
 <div class="par">
 <p>
-We’re excited to help you enhance your emotional intelligence, focusing on key areas like empathy, social skills, self-awareness, and self-regulation. Our AI-based training website is designed to provide you with personalized support and practical tools to help you grow. Together, we can work on boosting your EI and empowering you to navigate life’s challenges with greater confidence.
+content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here...
 </p>
 </div>
 <div class="btns">
     <hr>
     <br>
-<a class="start2" href="start.php">Get Started</a>
+<a class="options1" href="#"> Empathy </a>
+<a class="options1" href="#"> Self Awareness </a>
+<a class="options1" href="#"> Social Skills </a>
+<a class="options1" href="#"> Self Regulation </a>
 </div>
 <br>
 <br>
 </div>
 </div>
   </div>
-<div class="overlay"></div>
 
+  <!-- Header -->
+<header class="w3-container w3-black w3-center" style="padding:120px 16px">
+</header>
 
-
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <p> Social Links (optional) </p>
-
-<i class="fa fa-facebook" style="font-size:24px"></i>
-<i class="fa fa-twitter" style="font-size:24px"></i>
-<i class="fa fa-instagram" style="font-size:24px"></i>
+<div class= 'container'>
+<div class="container_content">
+<div class="container_content_inner">
+<div class="title">
+    <br>
+  <h1>Choose your best!</h1>
 </div>
+<div class="par">
+<p>
+content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here...
+</p>
+</div>
+<div class="btns">
+    <hr>
+    <br>
+
+    <div class="dropdown">
+  <span>Empathy</span>
+  <div class="dropdown-content">
+  <a href="#">Based Learning</a>
+  <a href="#">Quizzes & Assessment</a>
+  <a href="#">Emotion Recognition</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <span>Self Awareness</span>
+  <div class="dropdown-content">
+  <a href="#">Based Learning</a>
+  <a href="#">Quizzes & Assessment</a>
+  <a href="#">Emotion Recognition</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <span>Social Skills</span>
+  <div class="dropdown-content">
+  <a href="#">Based Learning</a>
+  <a href="#">Quizzes & Assessment</a>
+  <a href="#">Emotion Recognition</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <span>Self Regulation</span>
+  <div class="dropdown-content">
+  <a href="#">Based Learning</a>
+  <a href="#">Quizzes & Assessment</a>
+  <a href="#">Emotion Recognition</a>
+  </div>
+</div>
+</div>
+<br>
+<br>
+</div>
+</div>
+  </div>
 
 <!-- Footer -->
  <center>
@@ -82,6 +130,7 @@ We’re excited to help you enhance your emotional intelligence, focusing on key
       <p>© <span>Copyright</span> <strong class="px-1 sitename"> Aron N. </strong> <span>All Rights Reserved 2024</span></p>
     </div>
 </center>
+
 
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button
