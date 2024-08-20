@@ -44,7 +44,7 @@
   <h1>Choose your best!</h1>
 </div>
 <div class="par">
-<p>
+<p class="slideup">
 content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here...
 </p>
 </div>
@@ -74,7 +74,7 @@ content here... content here... content here... content here... content here... 
   <h1>Choose your best!</h1>
 </div>
 <div class="par">
-<p>
+<p class="slideup">
 content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here...
 </p>
 </div>
@@ -85,7 +85,7 @@ content here... content here... content here... content here... content here... 
     <div class="dropdown">
   <span>Empathy</span>
   <div class="dropdown-content">
-  <a href="#">Based Learning</a>
+  <a href="#">Scenario Based Learning</a>
   <a href="#">Quizzes & Assessment</a>
   <a href="#">Emotion Recognition</a>
   </div>
@@ -94,7 +94,7 @@ content here... content here... content here... content here... content here... 
 <div class="dropdown">
   <span>Self Awareness</span>
   <div class="dropdown-content">
-  <a href="#">Based Learning</a>
+  <a href="#">Scenario Based Learning</a>
   <a href="#">Quizzes & Assessment</a>
   <a href="#">Emotion Recognition</a>
   </div>
@@ -103,7 +103,7 @@ content here... content here... content here... content here... content here... 
 <div class="dropdown">
   <span>Social Skills</span>
   <div class="dropdown-content">
-  <a href="#">Based Learning</a>
+  <a href="#">Scenario Based Learning</a>
   <a href="#">Quizzes & Assessment</a>
   <a href="#">Emotion Recognition</a>
   </div>
@@ -112,7 +112,7 @@ content here... content here... content here... content here... content here... 
 <div class="dropdown">
   <span>Self Regulation</span>
   <div class="dropdown-content">
-  <a href="#">Based Learning</a>
+  <a href="#">Scenario Based Learning</a>
   <a href="#">Quizzes & Assessment</a>
   <a href="#">Emotion Recognition</a>
   </div>

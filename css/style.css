@@ -37,6 +37,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 }
 .intro{
     font-size: 20px;
+    line-height: 28px;
+    transform: translateY(300px);
+    animation: slideUp .8s ease-in-out forwards .8s;
 }
 
   .container {
@@ -65,7 +68,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     overflow: hidden;
   }
   
-  p{
+  .slideup {
     line-height: 28px;
     transform: translateY(300px);
     animation: slideUp .8s ease-in-out forwards .8s;
@@ -107,7 +110,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   }
 
   .fa {
-    padding: 10px;
+    padding: 13px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
   }
 
 
@@ -137,3 +142,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  .fontsize {
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 80%;
+  }
+

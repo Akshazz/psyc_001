@@ -50,7 +50,7 @@
   <h1>Hi there!</h1>
 </div>
 <div class="par">
-<p>
+<p class="slideup">
 We’re excited to help you enhance your emotional intelligence, focusing on key areas like empathy, social skills, self-awareness, and self-regulation. Our AI-based training website is designed to provide you with personalized support and practical tools to help you grow. Together, we can work on boosting your EI and empowering you to navigate life’s challenges with greater confidence.
 </p>
 </div>
@@ -67,14 +67,15 @@ We’re excited to help you enhance your emotional intelligence, focusing on key
 <div class="overlay"></div>
 
 
-
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <p> Social Links (optional) </p>
-
-<i class="fa fa-facebook" style="font-size:24px"></i>
-<i class="fa fa-twitter" style="font-size:24px"></i>
-<i class="fa fa-instagram" style="font-size:24px"></i>
+<!-- Social Links Here -->
+<br>
+<div class="w3-container w3-black w3-center w3-padding-60"><br>
+    <p class="fontsize"> For more information visit us on our social media links below. </p>
+    <a href="https://www.facebook.com/aron.niegos" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-instagram"></a><br><br>
 </div>
+
 
 <!-- Footer -->
  <center>
