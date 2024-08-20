@@ -40,6 +40,8 @@
 
 <!-- Header -->
 <header class="w3-container w3-black w3-center" style="padding:128px 16px">
+<div class="container_content_inner">
+<div class="title">
   <h1 class="w3-margin w3-jumbo">Hi there!</h1>
   <p class="intro"> We’re excited to help you enhance your emotional intelligence, focusing on key areas like empathy, social skills, self-awareness, and self-regulation. Our AI-based training website is designed to provide you with personalized support and practical tools to help you grow. Together, we can work on boosting your EI and empowering you to navigate life’s challenges with greater confidence. </p>
 <hr>
