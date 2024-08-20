@@ -22,11 +22,10 @@
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-
-    <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-white">
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/></svg>
+    
+    <a href="start.php" class="w3-bar-item w3-button w3-padding-large w3-white">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/></svg>
     </a>
 
     <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About (optional)</a> -->
@@ -47,53 +46,22 @@
 <div class="container_content_inner">
 <div class="title">
     <br>
-  <h1>Choose your best!</h1>
+  <h1 class="none">EXAMPLE: SCENARIO BASED LEARNING (SBL)</h1>
 </div>
 <div class="par">
-<p class="slideup">
-content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here...
-</p>
 </div>
 
-<div class="btns">
-    <hr>
-    <br>
+<form action="/action_page.php">
+    <div class="mb-3">
+    <label for="answer1" class="form-label"><p class="slideup">One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
+    <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
+    <textarea  placeholder="Enter your answer here!" class="form-control" id="answer1" aria-describedby="emailHelp" rows="4" cols="50"></textarea>
+    <div id="emailHelp" class="form-text">Please answer the questions above.</div>
+    </div>
+     <br>
+    <input class="btn btn-secondary" type="submit" value="Submit">
+    </form>
 
-    <div class="dropdown">
-  <span>Empathy</span>
-  <div class="dropdown-content">
-  <a class="link1" href="sbl.php">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
-  </div>
-</div>
-
-<div class="dropdown">
-  <span>Self Awareness</span>
-  <div class="dropdown-content">
-  <a class="link1" href="#">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
-  </div>
-</div>
-
-<div class="dropdown">
-  <span>Social Skills</span>
-  <div class="dropdown-content">
-  <a class="link1" href="#">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
-  </div>
-</div>
-
-<div class="dropdown">
-  <span>Self Regulation</span>
-  <div class="dropdown-content">
-  <a class="link1" href="#">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
-  </div>
-</div>
 </div>
 <br>
 <br>
