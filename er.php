@@ -38,7 +38,7 @@
 </div> 
 
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:120px 16px">
+<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > Get Started > <b>Emotional Recognation</b> ></p></fieldset>
 </header>
 
 <div class= 'container'>
@@ -56,7 +56,7 @@
     <div>
     <img style="width: 200px; height: 200px" src="images/image1.png"/>
     </div>
-    
+
     <div class="mb-3">
     <label for="answer1" class="form-label"><p class="slideup"><p class="slideup"><b>Instructions:</b> Look at the image of a person’s facial expression and choose the most appropriate response in a social context.</p></label>
     <textarea  placeholder="Enter your answer here!" class="form-control" id="answer1" aria-describedby="emailHelp" rows="4" cols="50"></textarea>
@@ -79,7 +79,7 @@
   </div>
 
   <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:120px 16px">
+<header class="w3-container w3-black w3-center" style="padding:100px 16px">
 </header>
 
 <!-- Footer -->

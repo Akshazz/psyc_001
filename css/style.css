@@ -156,4 +156,11 @@
 .btn{
   color: red;
 }
-
+.tab1{
+  text-align: left;
+}
+.field{
+  border: 1px solid rgb(255, 255, 255);
+  padding: 15px 20px; 
+  border-radius: 10px;
+}

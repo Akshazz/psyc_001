@@ -39,7 +39,7 @@
 </div> 
 
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:120px 16px">
+<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>Get Started</b> > </p></fieldset>
 </header>
 
 <div class= 'container'>
@@ -107,7 +107,7 @@ content here... content here... content here... content here... content here... 
   </div>
 
   <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:120px 16px">
+<header class="w3-container w3-black w3-center" style="padding:200px 16px">
 </header>
 
 <!-- Footer -->
