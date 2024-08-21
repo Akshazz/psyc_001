@@ -71,10 +71,13 @@ if (isset($_POST["submit"])) {
 
 <form action="" method="post">
     <div class="mb-3">
-    <label for="answer1" class="form-label"><p class="slideup"> First Name </p></label>
-    <input  type="text" placeholder="Enter your First name" class="form-control" name="fname" id="fname" aria-describedby="fname" rows="4" cols="50" required></input>
-    <label for="answer1" class="form-label"><p class="slideup"> Last Name </p></label>
-    <input  type="text" placeholder="Enter your Last name" class="form-control" name="lname" id="lname" aria-describedby="lname" rows="4" cols="50" required></input>
+<br>
+  <div class="input-group">
+  <span class="input-group-text"> Full Name </span>
+  <input type="text" name="fname" id="fname" placeholder="Enter your First Name" aria-label="First name" class="form-control" required>
+  <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" aria-label="Last name" class="form-control" required>
+  </div>
+  <br>
 
     <label for="answer1" class="form-label"><p class="slideup"> <b>Questions #1:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
     <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
