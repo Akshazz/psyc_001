@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -49,25 +51,6 @@
 <div class="par">
 <p class="slideup">
 content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here...
-
-<?php
-	if(isset($_SESSION['valid'])) {			
-		include("connections/connection.php");					
-		$result = mysqli_query($conn, "SELECT * FROM login");
-	?><br>
-  <h3> WELCOME! </h3> <br>
-    <h4 style="color: red; "><?php echo $_SESSION['fname'] ?>
-    <?php echo $_SESSION['lname'] ?></h4>
-    
-    <a href='logout.php'>Submit Another one</a><br/>
-		<br/>
-		<br/><br/>
-	<?php	
-	} else {
-		echo "You must be logged in to view this page.<br/><br/>";
-		echo "<a href='login.php'>Login</a> | <a href='details.php'> submit new </a>";
-	}
-	?>
 
 </p>
 </div>

@@ -1,6 +1,5 @@
 <?php
-
-include "connections/connection.php";
+session_start();
 ?>
 
 
@@ -23,7 +22,7 @@ include "connections/connection.php";
   <div class="w3-bar w3-white w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
-    <a href="modal.php" class="w3-bar-item w3-button w3-padding-large w3-white" style="transition: 1.0s;">
+    <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-white" style="transition: 1.0s;">
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
     <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
     <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/></svg>
@@ -39,18 +38,12 @@ include "connections/connection.php";
 </div> 
 
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>My Results</b> > </p></fieldset>
+<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>Results & Feedback</b> > </p></fieldset>
 </header>
 
-<div class= 'container'>
-<div class="container_content">
-<div class="container_content_inner">
-<div class="title">
-</div>
 
-
-<nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #00ff5573;">
-    YOUR DATABASE
+<nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
+    Results and Feedback
   </nav>
 
   <div class="container">
@@ -63,38 +56,20 @@ include "connections/connection.php";
     </div>';
     }
     ?>
-
-    <table class="table table-hover text-center">
-      <thead class="table-dark">
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Answer #1</th>
-          <th scope="col">Answer #2</th>
-          <th scope="col">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        $sql = "SELECT * FROM `questions`";
-        $result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_assoc($result)) {
-        ?>
-          <tr>
-            <td><?php echo $row["ref"] ?></td>
-            <td><?php echo $row["answer1"] ?></td>
-            <td><?php echo $row["answer2"] ?></td>
-            <td>
-                <!--
-              <a href="edit.php?ref=<?php echo $row["ref"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-              <a href="delete.php?ref=<?php echo $row["ref"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
-            </td> -->
-          </tr>
-        <?php
-        }
-        ?>
-      </tbody>
-    </table>
-  </div>
+	<?php
+	if(isset($_SESSION['fname'])) {			
+		include("connections/connection.php");					
+		$result = mysqli_query($conn, "SELECT * FROM questions");
+	?>
+				
+		Welcome 
+        <?php echo $_SESSION['fname'] ?><?php echo $_SESSION['lname'] ?>
+		<br/><br/>
+        <?php	
+	} else {
+		echo "<a href='modal2.php'> View Results. </a>";
+	}
+	?>
 
 
 </div>

@@ -1,20 +1,21 @@
 <?php
-
+session_start ();
 include "connections/connection.php";
-
 if (isset($_POST["submit"])) {
-   $answer1 = $_POST['answer1'];
-   $answer2 = $_POST['answer2'];
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $answer1 = $_POST['answer1'];
+  $answer2 = $_POST['answer2'];
 
-   $sql = "INSERT INTO `questions`(`ref`, `answer1`, `answer2`) VALUES (NULL,'$answer1','$answer2')";
+  $sql = "INSERT INTO `questions`(`id`, `fname`,`lname`,`answer1`, `answer2`) VALUES (NULL,'$fname','$lname','$answer1','$answer2')";
 
-   $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($conn, $sql);
 
-   if ($result) {
-      header("Location: sbl.php?msg=New record created successfully");
-   } else {
-      echo "Failed: " . mysqli_error($conn);
-   }
+  if ($result) {
+     header("Location: modal.php?msg=Submit successfully");
+  } else {
+     echo "Failed: " . mysqli_error($conn);
+  }
 }
 
 ?>
@@ -70,6 +71,11 @@ if (isset($_POST["submit"])) {
 
 <form action="" method="post">
     <div class="mb-3">
+    <label for="answer1" class="form-label"><p class="slideup"> First Name </p></label>
+    <input  type="text" placeholder="Enter your First name" class="form-control" name="fname" id="fname" aria-describedby="fname" rows="4" cols="50" required></input>
+    <label for="answer1" class="form-label"><p class="slideup"> Last Name </p></label>
+    <input  type="text" placeholder="Enter your Last name" class="form-control" name="lname" id="lname" aria-describedby="lname" rows="4" cols="50" required></input>
+
     <label for="answer1" class="form-label"><p class="slideup"> <b>Questions #1:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
     <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
     <textarea  type="text" placeholder="Enter your answer here!" class="form-control" name="answer1" id="answer1" aria-describedby="answer1" rows="4" cols="50" required></textarea>

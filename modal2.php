@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+session_start();
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -35,61 +38,16 @@
 </div> 
 
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>General</b> > </p></fieldset>
+<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>Results & Feedback</b> > </p></fieldset>
 </header>
+
+
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
-    Your Details
+    Results and Feedback
   </nav>
-<div class= 'container'>
-<div class="container_content">
-<div class="container_content_inner">
-<div class="title">
-</div>
 
 
-<?php
-include("connections/connection.php");
 
-if(isset($_POST['submit'])) {
-	$fname = $_POST['fname'];
-	$lname = $_POST['lname'];
-
-	if($fname == "" || $lname == "") {
-		echo "All fields should be filled. Either one or many fields are empty.";
-		echo "<br/>";
-		echo "<a href='reg.php'> Go back </a>";
-	} else {
-		mysqli_query($conn, "INSERT INTO login(fname, lname) VALUES('$fname', '$lname')")
-			or die("Could not execute the insert query.");
-			
-		echo "Registration successfully";
-		echo "<br/>";
-		echo "<a href='details.php'> Continue </a>";
-	}
-} else {
-?>
-	<p><font size="+2">Register</font></p>
-	<form name="form1" method="post" action="">
-		<table width="75%" border="0">
-			<tr> 
-				<td><label for="fname" class="form-label"> Last Name </label></td>
-				<td><input type="text" name="fname" class="form-control"></td>
-			</tr>
-			<tr> 
-				<td>Email</td>
-				<td><input type="text" name="lname"></td>
-			</tr>			
-			<tr> 
-				<td>&nbsp;</td>
-				<td><input type="submit" name="submit" value="Submit"></td>
-			</tr>
-		</table>
-	</form>
-<?php
-}
-?>
-
-  
 
 </div>
 <br>

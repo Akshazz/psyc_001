@@ -42,14 +42,9 @@ include "../connections/connection.php";
 <header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>Admin Panel</b> > </p></fieldset>
 </header>
 
-<div class= 'container'>
-<div class="container_content">
-<div class="container_content_inner">
-<div class="title">
-</div>
 
 
-<nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #00ff5573;">
+<nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
     YOUR DATABASE
   </nav>
 
