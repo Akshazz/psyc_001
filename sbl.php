@@ -67,22 +67,24 @@ if (isset($_POST["submit"])) {
 <div class="par">
 </div>
 
-<form action="" method="post" style="width:50vw; min-width:300px;">
+
+<form action="" method="post">
     <div class="mb-3">
     <label for="answer1" class="form-label"><p class="slideup"> <b>Questions #1:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
     <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
-    <textarea  type="text" placeholder="Enter your answer here!" class="form-control" name="answer1" id="answer1" aria-describedby="answer1" rows="4" cols="50"></textarea>
+    <textarea  type="text" placeholder="Enter your answer here!" class="form-control" name="answer1" id="answer1" aria-describedby="answer1" rows="4" cols="50" required></textarea>
 
 <br>
 
-    <label for="answer2" class="form-label"><p class="slideup"> <b>Questions #2:</b>One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
+    <label for="answer2" class="form-label"><p class="slideup"> <b>Questions #2:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
     <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
-    <textarea  type="text" placeholder="Enter your answer here!" class="form-control" name="answer2" id="answer2" aria-describedby="answer2" rows="4" cols="50"></textarea>
+    <textarea  type="text" placeholder="Enter your answer here!" class="form-control" name="answer2" id="answer2" aria-describedby="answer2" rows="4" cols="50" required></textarea>
 
 
     <div class="form-text">Please answer the questions above.</div>
     </div>
      <br>
+
      <button type="submit" class="btn btn-secondary" name="submit"> Submit </button>
     </form>
 
@@ -103,8 +105,9 @@ if (isset($_POST["submit"])) {
 </header>
 
 <!-- Footer -->
- <center>
-<div class="container copyright text-center mt-4">
+<center>
+  <br>
+<div>
       <p>© <span>Copyright</span> <strong class="px-1 sitename"> Aron N. </strong> <span>All Rights Reserved 2024</span></p>
     </div>
 </center>

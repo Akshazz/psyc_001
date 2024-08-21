@@ -35,82 +35,76 @@
 </div> 
 
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>Get Started</b> > </p></fieldset>
+<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>General</b> > </p></fieldset>
 </header>
-
+<nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
+    Your Details
+  </nav>
 <div class= 'container'>
 <div class="container_content">
 <div class="container_content_inner">
 <div class="title">
-    <br>
-  <h1>Choose your best!</h1>
-  
 </div>
-<div class="par">
-<p class="slideup">
-content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here...
+
+
+
+
+  <?php
+  
+include ("connections/connection.php");
+
+if(isset($_POST['submit'])) {
+    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+
+	if($fname == "" || $lname == "") {
+		echo "Either First Name or Last Name field is empty.";
+		echo "<br/>";
+		echo "<a href='details.php'>Go back</a>";
+	} else {
+		$result = mysqli_query($conn, "SELECT * FROM login WHERE fname='$fname' AND lname='$lname'")
+					or die("Could not execute the select query.");
+		
+		$row = mysqli_fetch_assoc($result);
+		
+		if(is_array($row) && !empty($row)) {
+			$validfname = $row['fname'];
+			$_SESSION['valid'] = $validfname;
+			$_SESSION['name'] = $row['name'];
+			$_SESSION['id'] = $row['id'];
+            $_SESSION['fname'] = $row['fname'];
+            $_SESSION['lname'] = $row['lname'];
+
+		} else {
+			echo "You are not existing user here!.<br>"; 
+            echo "If you are not registered please mag register ka muna! .";
+			echo "<br/>";
+			echo "<a href='details.php' style='color:black' text-decoration='none'> Go back </a> ";
+		}
+
+		if(isset($_SESSION['valid'])) {
+			header('Location: start.php');			
+		}
+	}
+} else {
+?>
+    <center>
+	<p> <b>Hi there!</b> <br> What is your full name?</p>
+
+	    <form name="form1" method="post" action="">
+        <input style="padding: 10px 10px; width: 45%;" type="text" name="fname" class="form-control" placeholder="Enter your First Name here!" required><br>
+        <input style="padding: 10px 10px; width: 45%;" type="lname" name="lname" class="form-control" placeholder="Enter your Last Name here!" required>
+        <br>
+        <button type="submit" name="submit" class="btn btn-secondary">Submit</button>
+        <hr>
+        <a hre="reg.php" class="reg1"> i already have an account. </a>
+	</form>
+    </center>
 
 <?php
-	if(isset($_SESSION['valid'])) {			
-		include("connections/connection.php");					
-		$result = mysqli_query($conn, "SELECT * FROM login");
-	?><br>
-  <h3> WELCOME! </h3> <br>
-    <h4 style="color: red; "><?php echo $_SESSION['fname'] ?>
-    <?php echo $_SESSION['lname'] ?></h4>
-    
-    <a href='logout.php'>Submit Another one</a><br/>
-		<br/>
-		<br/><br/>
-	<?php	
-	} else {
-		echo "You must be logged in to view this page.<br/><br/>";
-		echo "<a href='login.php'>Login</a> | <a href='details.php'> submit new </a>";
-	}
-	?>
+}
+?>
 
-</p>
-</div>
-
-<div class="btns">
-    <hr>
-    <br>
-
-    <div class="dropdown">
-  <span>Empathy</span>
-  <div class="dropdown-content">
-  <a class="link1" href="sbl.php">Scenario Based Learning</a>
-  <a class="link1" href="qa.php">Quizzes & Assessment</a>
-  <a class="link1" href="er.php">Emotion Recognition</a>
-  </div>
-</div>
-
-<div class="dropdown">
-  <span>Self Awareness</span>
-  <div class="dropdown-content">
-  <a class="link1" href="#">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
-  </div>
-</div>
-
-<div class="dropdown">
-  <span>Social Skills</span>
-  <div class="dropdown-content">
-  <a class="link1" href="#">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
-  </div>
-</div>
-
-<div class="dropdown">
-  <span>Self Regulation</span>
-  <div class="dropdown-content">
-  <a class="link1" href="#">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
-  </div>
-</div>
 </div>
 <br>
 <br>

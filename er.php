@@ -83,8 +83,9 @@
 </header>
 
 <!-- Footer -->
- <center>
-<div class="container copyright text-center mt-4">
+<center>
+  <br>
+<div>
       <p>© <span>Copyright</span> <strong class="px-1 sitename"> Aron N. </strong> <span>All Rights Reserved 2024</span></p>
     </div>
 </center>
