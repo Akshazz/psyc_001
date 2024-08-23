@@ -70,7 +70,7 @@ session_start();
 		echo "<a href='modal2.php'> View Results. </a>";
 	}
 	?>
-
+    <p style="color:red;" id="result"></p>
 
 </div>
 <br>

@@ -1,5 +1,23 @@
 <?php
-session_start();
+include "connections/connection.php";
+if (isset($_POST["submit"])) {
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $answer1 = $_POST['answer1'];
+  $answer2 = $_POST['answer2'];
+
+  $sql = "INSERT INTO `questions`(`id`, `fname`,`lname`,`answer1`, `answer2`) VALUES (NULL,'$fname','$lname','$answer1','$answer2')";
+
+  $result = mysqli_query($conn, $sql);
+
+  if ($result) {
+     header("Location: modal2.php?msg=Your Results!");
+  } 
+  else {
+     echo "Failed: " . mysqli_error($conn);
+  }
+}
+
 ?>
 
 
@@ -11,6 +29,7 @@ session_start();
             <meta content="width=device-width, initial-scale=1.0" name="viewport">
             <title> PSYC WEB </title>
             <link rel="stylesheet" href="css/style.css">
+            <script src="js/script.js" defer></script>
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -48,6 +67,58 @@ session_start();
 
 
 
+  <div class= 'container'>
+<div class="container_content">
+<div class="container_content_inner">
+<div class="title">
+    <br>
+  <h1 class="none">EXAMPLE: SCENARIO BASED LEARNING (SBL)</h1>
+</div>
+<div class="par">
+
+<?php
+    if (isset($_GET["msg"])) {
+      $msg = $_GET["msg"];
+      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert"><p id="result"></p>
+      ' . $msg . '
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
+    }
+    ?>
+
+</div>
+
+<div class="mb-3"><h4 style="color: red;" id="result"></h4>
+
+<!-- <form action="" method="post"> -->
+  
+<br>
+  <div class="input-group">
+  <span class="input-group-text"> Full Name </span>
+  <input type="text" name="fname" id="fname" placeholder="Enter your First Name" aria-label="First name" class="form-control" >
+  <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" aria-label="Last name" class="form-control" >
+  </div>
+  <br>
+  
+    <label for="answer1" class="form-label"><p class="slideup"> <b>Questions #1:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
+    <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
+
+    <textarea class="form-control" id="answer1" rows="4" cols="50" placeholder="Enter your answer here!"></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+    </div>
+    <label for="answer2" class="form-label"><p class="slideup"> <b>Questions #2:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
+    <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
+    <textarea class="form-control" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!"></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+
+    <br>
+    <!-- <button class="btn btn-secondary" onclick="checkText()" type="submit" name="submit"> Submit </button> -->
+    <button class="btn btn-secondary" onclick="checkText()"> Submit </button>
+
+    </div>
+     <br>
+    
+    </form>
 
 </div>
 <br>
@@ -60,6 +131,7 @@ session_start();
 </div>
 </div>
   </div>
+  
 
   <!-- Header -->
 <header class="w3-container w3-black w3-center" style="padding:200px 16px">

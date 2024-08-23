@@ -1,5 +1,4 @@
 <?php
-session_start ();
 include "connections/connection.php";
 if (isset($_POST["submit"])) {
   $fname = $_POST['fname'];
@@ -13,7 +12,8 @@ if (isset($_POST["submit"])) {
 
   if ($result) {
      header("Location: modal.php?msg=Submit successfully");
-  } else {
+  } 
+  else {
      echo "Failed: " . mysqli_error($conn);
   }
 }
@@ -29,6 +29,7 @@ if (isset($_POST["submit"])) {
             <meta content="width=device-width, initial-scale=1.0" name="viewport">
             <title> PSYC WEB </title>
             <link rel="stylesheet" href="css/style.css">
+            <script src="js/restriction.js" defer></script>
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -68,7 +69,6 @@ if (isset($_POST["submit"])) {
 <div class="par">
 </div>
 
-
 <form action="" method="post">
     <div class="mb-3">
 <br>
@@ -78,7 +78,7 @@ if (isset($_POST["submit"])) {
   <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" aria-label="Last name" class="form-control" required>
   </div>
   <br>
-
+  <h4 style="color: red;" id="result"></h4>
     <label for="answer1" class="form-label"><p class="slideup"> <b>Questions #1:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
     <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
     <textarea  type="text" placeholder="Enter your answer here!" class="form-control" name="answer1" id="answer1" aria-describedby="answer1" rows="4" cols="50" required></textarea>
@@ -94,8 +94,9 @@ if (isset($_POST["submit"])) {
     </div>
      <br>
 
-     <button type="submit" class="btn btn-secondary" name="submit"> Submit </button>
+<button onclick="checkText()" id="submitBtn" type="submit" class="btn btn-secondary" name="submit"> Submit </button>
     </form>
+
 
 </div>
 <br>
@@ -108,6 +109,29 @@ if (isset($_POST["submit"])) {
 </div>
 </div>
   </div>
+
+  <script>
+        const submitBtn = document.getElementById('submitBtn');
+        const message = document.getElementById('message');
+
+        document.getElementById('myForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            try {
+                const response = await fetch('/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                const result = await response.text();
+                message.textContent = result;
+            } catch (error) {
+                message.textContent = 'An error occurred.';
+            }
+        });
+    </script>
 
   <!-- Header -->
 <header class="w3-container w3-black w3-center" style="padding:100px 16px">

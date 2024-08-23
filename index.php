@@ -59,7 +59,7 @@
   <h1>Hi there!</h1>
 </div>
 <div class="par">
-<p class="slideup">
+<p style="text-align: justify;" class="slideup">
 We’re excited to help you enhance your emotional intelligence, focusing on key areas like empathy, social skills, self-awareness, and self-regulation. Our AI-based training website is designed to provide you with personalized support and practical tools to help you grow. Together, we can work on boosting your EI and empowering you to navigate life’s challenges with greater confidence.
 </p>
 </div>
