@@ -43,7 +43,6 @@ include "../connections/connection.php";
 </header>
 
 
-
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
     YOUR DATABASE
   </nav>
@@ -62,26 +61,29 @@ include "../connections/connection.php";
     <table class="table table-hover text-center">
       <thead class="table-dark">
         <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Answer #1</th>
-          <th scope="col">Answer #2</th>
-          <th scope="col">Action</th>
+          <th scope="col"><p style="font-size: 15px; padding: 12px 45px;">Full Name</p></th>
+          <th scope="col">
+          <p style="font-size: 10px; text-align: justify;"> <b>Questions #1:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.</p></th>
+          <th scope="col">
+          <p style="font-size: 10px; text-align: justify;"> <b>Questions #1:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.</th>
+          <th scope="col"><p style="font-size: 15px; padding: 15px 10px;">Action</p></th>
         </tr>
       </thead>
       <tbody>
         <?php
         $sql = "SELECT * FROM `questions`";
         $result = mysqli_query($conn, $sql);
+        $count=$result->num_rows;
         while ($row = mysqli_fetch_assoc($result)) {
         ?>
           <tr>
-            <td><?php echo $row["ref"] ?></td>
+            <td><b><p style="font-size: 10px; padding: 50px 50px;"> <?php echo $row["fname"] ?> <?php echo $row["lname"] ?></b></p></td>
             <td><?php echo $row["answer1"] ?></td>
             <td><?php echo $row["answer2"] ?></td>
             <td>
                 <!--
-              <a href="edit.php?ref=<?php echo $row["ref"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-              <a href="delete.php?ref=<?php echo $row["ref"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+              <a href="edit.php?ref=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+              <a href="delete.php?ref=<?php echo $row["id"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
             </td> -->
           </tr>
         <?php
