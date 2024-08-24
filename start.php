@@ -43,23 +43,69 @@
 <div class= 'container'>
 <div class="container_content">
 <div class="container_content_inner">
-<div class="title">
+
     <br>
-  <h1>Choose your best!</h1>
-  
+  <h1 style="text-align: center; font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">CHOOSE YOUR BEST!</h1>
+  <hr>
 </div>
 <div class="par">
-<p class="slideup">
-content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here... content here...
 
+<p style="text-align: justify; opacity: 60%; font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="slideup">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This section offers interactive learning experiences centered on essential emotional and social skills. Each category—Empathy, Self-Awareness, Social Skills, and Self-Regulation—features tailored resources like scenario-based learning, quizzes, assessments, and emotion recognition exercises. Choose a category to explore these tools and enhance your emotional intelligence through engaging and practical activities.
 </p>
+
 </div>
 
-<div class="btns">
-    <hr>
-    <br>
+    <table class="content-table">
+        <tr>
+            <td>
+            <div class="label">
+            <p style="color: white; padding: 0px 20px; background-color: black; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EMPATHY</p><br>
+            <a style="text-align: left;" class="link1" href="modal2.php">Scenario Based Learning</a>
+            <a style="text-align: left;" class="link1" href="qa.php">Quizzes & Assessment</a>
+            <a style="text-align: left;" class="link1" href="er.php">Emotion Recognition</a>
+            </div>  
+            </td>
+            <td>
+            <div class="label">
+            <p style="color: white; padding: 0px 20px; background-color: black; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SELF AWARENESS</p><br>
+            <a style="text-align: left;" class="link1" href="modal2.php">Scenario Based Learning</a>
+            <a style="text-align: left;" class="link1" href="qa.php">Quizzes & Assessment</a>
+            <a style="text-align: left;" class="link1" href="er.php">Emotion Recognition</a>
+            </div>  
+            </td>
+            <td>
+            <div class="label">
+            <p style="color: white; padding: 0px 20px; background-color: black; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SOCIAL SKILLS</p><br>
+            <a style="text-align: left;" class="link1" href="modal2.php">Scenario Based Learning</a>
+            <a style="text-align: left;" class="link1" href="qa.php">Quizzes & Assessment</a>
+            <a style="text-align: left;" class="link1" href="er.php">Emotion Recognition</a>
+            </div> 
+            </td>
+            <td>
+            <div class="label">
+            <p style="color: white; padding: 0px 20px; background-color: black; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SELF REGULATION</p><br>
+            <a style="text-align: left;" class="link1" href="modal2.php">Scenario Based Learning</a>
+            <a style="text-align: left;" class="link1" href="qa.php">Quizzes & Assessment</a>
+            <a style="text-align: left;" class="link1" href="er.php">Emotion Recognition</a>
+            </div>   
+            </td>
+        </tr>
+    </table>
 
-    <div class="dropdown">
+
+
+
+
+
+
+<br>
+
+
+
+
+<div class="dropdown">
   <span>Empathy</span>
   <div class="dropdown-content">
   <a class="link1" href="modal2.php">Scenario Based Learning</a>
@@ -71,29 +117,31 @@ content here... content here... content here... content here... content here... 
 <div class="dropdown">
   <span>Self Awareness</span>
   <div class="dropdown-content">
-  <a class="link1" href="#">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
+  <a class="link1" href="modal2.php">Scenario Based Learning</a>
+  <a class="link1" href="qa.php">Quizzes & Assessment</a>
+  <a class="link1" href="er.php">Emotion Recognition</a>
   </div>
 </div>
 
 <div class="dropdown">
   <span>Social Skills</span>
   <div class="dropdown-content">
-  <a class="link1" href="#">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
+  <a class="link1" href="modal2.php">Scenario Based Learning</a>
+  <a class="link1" href="qa.php">Quizzes & Assessment</a>
+  <a class="link1" href="er.php">Emotion Recognition</a>
   </div>
 </div>
 
 <div class="dropdown">
   <span>Self Regulation</span>
   <div class="dropdown-content">
-  <a class="link1" href="#">Scenario Based Learning</a>
-  <a class="link1" href="#">Quizzes & Assessment</a>
-  <a class="link1" href="#">Emotion Recognition</a>
+  <a class="link1" href="modal2.php">Scenario Based Learning</a>
+  <a class="link1" href="qa.php">Quizzes & Assessment</a>
+  <a class="link1" href="er.php">Emotion Recognition</a>
   </div>
 </div>
+
+
 </div>
 <br>
 <br>

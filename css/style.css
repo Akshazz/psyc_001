@@ -159,11 +159,8 @@
   }
   .link1{
     text-decoration: none;
-    background-color: rgb(0, 0, 0);
-    padding: 4px;
     font-size: 11px;
     color: white;
-    border-radius: 15px 15px 15px 15px;
   }
   .link1:hover{
     color: yellow;
@@ -184,3 +181,124 @@
   font-size: 15px;
   text-decoration: none;
 }
+.label{
+  width: 200px;
+  height: 200px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background-size: cover;
+  background-image: url('../images/image1.png');
+
+}
+
+.border-shadow-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example shadow */
+  padding: 20px;
+  background-color: #333; /* Example background */
+}
+
+.label {
+  text-align: center;
+  margin-bottom: 20px; /* Space between heading and table */
+}
+
+.content-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders to remove spacing between cells */
+}
+
+.content-table td {
+  padding: 10px; /* Space inside each cell */
+  border: 1px solid #444; /* Example border */
+  text-align: center;
+}
+
+.link1 {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px; /* Space between links if needed */
+}
+/* Base styles for table */
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.content-table td {
+  padding: 10px;
+  border: 1px solid #444;
+  text-align: center;
+  border: none;
+}
+
+.label {
+  text-align: center;
+  padding: 10px;
+}
+
+.link1 {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content-table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      border: 0;
+  }
+
+  .content-table thead {
+      display: none;
+  }
+
+  .content-table, .content-table tbody, .content-table tr, .content-table td {
+      display: block;
+      width: 100%;
+  }
+
+  .content-table tr {
+      margin-bottom: 10px;
+  }
+
+  .content-table td {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      border: none;
+      padding: 10px 0;
+      position: relative;
+  }
+
+  .content-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 150px;
+      font-weight: bold;
+      background: #333;
+      color: white;
+      padding: 5px;
+      box-sizing: border-box;
+      border-right: 1px solid #444;
+  }
+}
+
+/* Additional style for table on very small devices */
+@media (max-width: 480px) {
+  .content-table td::before {
+      font-size: 14px;
+      width: 120px;
+  }
+}
+
+

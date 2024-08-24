@@ -56,11 +56,11 @@
 <div class="container_content_inner">
 <div class="title">
     <br>
-  <h1>Hi there!</h1>
+  <p style="opacity: 60%; font-size: 18px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">LEARN MORE!</p>
 </div>
 <div class="par">
 <p style="text-align: justify;" class="slideup">
-We’re excited to help you enhance your emotional intelligence, focusing on key areas like empathy, social skills, self-awareness, and self-regulation. Our AI-based training website is designed to provide you with personalized support and practical tools to help you grow. Together, we can work on boosting your EI and empowering you to navigate life’s challenges with greater confidence.
+Click here to dive deeper into the details and gain a clearer understanding of the topic. By following the link, you'll uncover more information, insights, and context. Whether you’re seeking specific data or a broader overview, this link will guide you to everything you need to know. Satisfy your curiosity with just one click.
 </p>
 </div>
 <div class="btns">
