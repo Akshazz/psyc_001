@@ -62,7 +62,7 @@ content here... content here... content here... content here... content here... 
     <div class="dropdown">
   <span>Empathy</span>
   <div class="dropdown-content">
-  <a class="link1" href="sbl.php">Scenario Based Learning</a>
+  <a class="link1" href="modal2.php">Scenario Based Learning</a>
   <a class="link1" href="qa.php">Quizzes & Assessment</a>
   <a class="link1" href="er.php">Emotion Recognition</a>
   </div>

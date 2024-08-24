@@ -21,8 +21,15 @@ function checkText() {
 
     // Check for farewells
     if (farewells.some(word => combinedText.includes(word))) {
-        result += "You said goodbye! ";
-    }
+        result += `
+        <p style="color: black;">Supportive Responses: Your ability to offer support and practical help was notable, especially when dealing with positive or negative emotions.</p>
+        <p>Tips to Enhance:</p>
+        <ul>
+            <li>Keep providing support that is both emotional and practical. Offering specific ways to help can deepen your empathetic interactions.</li>
+            <li>Engage in role-playing exercises to practice different supportive responses.</li>
+        </ul>
+    `;
+}
 
     // Check for gratitude
     if (gratitude.some(word => combinedText.includes(word))) {
@@ -30,14 +37,25 @@ function checkText() {
     }
 
     // If no words detected
-    if (!result) {
-        result = "Hindi kapa qualified sa taas!";
-    }
+   // If no words detected
+   if (!result) {
+    result = `
+        <p style="color: black;">Providing More Nuanced Emotional Support: In scenarios involving frustration, anxiety, and stress, your responses sometimes lacked depth. Rather than offering general reassurance, a more tailored approach addressing the specific concerns would be beneficial.</p>
+        <p>Tips for Improvement:</p>
+        <ul>
+            <li>Active Listening: Engage more deeply with the individual's concerns by asking open-ended questions to better understand their feelings.</li>
+            <li>Personalized Support: Offer practical solutions or assistance relevant to their specific situation. For instance, if someone is stressed about a deadline, help them plan or manage their tasks.</li>
+        </ul>
+    `;
+}
+
 
     // Update result and show the modal
     const resultElement = document.getElementById("result");
     resultElement.innerText = result;
     document.getElementById("modal").style.display = "block";
+    document.getElementById("result").innerHTML = result;
+
 }
 
 // Function to close the modal

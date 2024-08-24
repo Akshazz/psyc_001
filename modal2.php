@@ -58,19 +58,19 @@
 </div> 
 
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>Results & Feedback</b> > </p></fieldset>
+<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > Get Started > <b>Scenario Based Learning</b> > </p></fieldset>
 </header>
 
 
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
-    Results and Feedback
+    Test1 - Results and Feedback
   </nav>
 
   <div id="modal" class="modal">
     <div class="modal-content">
     <span class="close-button" onclick="closeModal()">&times;</span>
     <div id="loading" class="loading"><div class="spinner"></div> <hr>
-    <h4 style="color: red; text-align: justify; padding: 3% 5%; font-size: 15px;" id="result"></h4>
+    <h4 style="color: black; text-align: justify; padding: 3% 5%; font-size: 15px;" id="result"></h4>
     <hr>
     <button class="btn btn-secondary" onclick="checkText()"> Continue </button>
     </div>
