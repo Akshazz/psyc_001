@@ -1,3 +1,4 @@
+
 function checkText() {
     // Get the input from all text areas
     const answer1 = document.getElementById("answer1").value.toLowerCase();
@@ -15,7 +16,7 @@ function checkText() {
 
     // Check for emotions
     if (emotions.some(word => combinedText.includes(word))) {
-        result += "Effective Emotional Validation: You effectively recognized and validated emotions in most scenarios. This includes acknowledging feelings and providing encouragement in situations of joy, sadness, and embarrassment.";
+        result += "Effective Emotional Validation: You effectively recognized and validated emotions in most scenarios. This includes acknowledging feelings and providing encouragement in situations of joy, sadness, and embarrassment. ";
     }
 
     // Check for farewells
@@ -30,8 +31,17 @@ function checkText() {
 
     // If no words detected
     if (!result) {
-        result = "No specified words detected.";
+        result = "Hindi kapa qualified sa taas!";
     }
 
-    document.getElementById("result").innerText = result;
+    // Update result and show the modal
+    const resultElement = document.getElementById("result");
+    resultElement.innerText = result;
+    document.getElementById("modal").style.display = "block";
 }
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+

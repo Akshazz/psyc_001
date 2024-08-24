@@ -1,119 +1,111 @@
-<?php
-session_start();
-?>
-
-
 <!DOCTYPE html>
-<html>
-    <body>
-        <head>
-            <meta charset="utf-8">
-            <meta content="width=device-width, initial-scale=1.0" name="viewport">
-            <title> PSYC WEB </title>
-            <link rel="stylesheet" href="css/style.css">
-            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Check</title>
+    <style>
+        /* Basic styles for modal */
+        #modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        #modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Checker</h1>
+    <form id="textForm">
+        <label for="answer1">Input 1:</label>
+        <textarea id="answer1" rows="4" cols="50"></textarea>
+        <br>
+        <label for="answer2">Input 2:</label>
+        <textarea id="answer2" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="checkText()">Check Text</button>
+    </form>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-
-    <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-white" style="transition: 1.0s;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/></svg>
-    </a>
-
-    <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About (optional)</a> -->
-  </div>
-
-   <!-- Navbar on small screens -->
-   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large">About</a> -->
-  </div>
-</div> 
-
-<!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>Results & Feedback</b> > </p></fieldset>
-</header>
-
-
-<nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
-    Results and Feedback
-  </nav>
-
-  <div class="container">
-    <?php
-    if (isset($_GET["msg"])) {
-      $msg = $_GET["msg"];
-      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-      ' . $msg . '
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
-    }
-    ?>
-	<?php
-	if(isset($_SESSION['fname'])) {			
-		include("connections/connection.php");					
-		$result = mysqli_query($conn, "SELECT * FROM questions");
-	?>
-				
-		Welcome 
-        <?php echo $_SESSION['fname'] ?><?php echo $_SESSION['lname'] ?>
-		<br/><br/>
-        <?php	
-	} else {
-		echo "<a href='modal2.php'> View Results. </a>";
-	}
-	?>
-    <p style="color:red;" id="result"></p>
-
-</div>
-<br>
-<br>
-</div>
-</div>
-  </div>
-<br>
-<br>
-</div>
-</div>
-  </div>
-
-  <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:200px 16px">
-</header>
-
-<!-- Footer -->
-<center>
-  <br>
-<div>
-      <p>© <span>Copyright</span> <strong class="px-1 sitename"> Aron N. </strong> <span>All Rights Reserved 2024</span></p>
+    <!-- Modal -->
+    <div id="modal">
+        <div id="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="result"></p>
+        </div>
     </div>
-</center>
 
+    <script>
+        // JavaScript functions
+        function checkText() {
+            // Get the input from all text areas
+            const answer1 = document.getElementById("answer1").value.toLowerCase();
+            const answer2 = document.getElementById("answer2").value.toLowerCase();
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-        
-</html>
+            // Combine all input texts into one string
+            const combinedText = answer1 + " " + answer2;
+
+            // Words for detection
+            const emotions = ["sad", "happy", "care"];
+            const farewells = ["bye", "goodbye", "see you"];
+            const gratitude = ["thanks", "thank you", "appreciate"];
+
+            let result = "";
+
+            // Check for emotions
+            if (emotions.some(word => combinedText.includes(word))) {
+                result += "Effective Emotional Validation: You effectively recognized and validated emotions in most scenarios. This includes acknowledging feelings and providing encouragement in situations of joy, sadness, and embarrassment. ";
+            }
+
+            // Check for farewells
+            if (farewells.some(word => combinedText.includes(word))) {
+                result += "You said goodbye! ";
+            }
+
+            // Check for gratitude
+            if (gratitude.some(word => combinedText.includes(word))) {
+                result += "You expressed gratitude! ";
+            }
+
+            // If no words detected
+            if (!result) {
+                result = "No specified words detected.";
+            }
+
+            // Update result and show the modal
+            const resultElement = document.getElementById("result");
+            resultElement.innerText = result;
+            document.getElementById("modal").style.display = "block";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
 </body>
-
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+</html>

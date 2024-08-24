@@ -1,25 +1,24 @@
 <?php
-include "connections/connection.php";
-if (isset($_POST["submit"])) {
-  $fname = $_POST['fname'];
-  $lname = $_POST['lname'];
-  $answer1 = $_POST['answer1'];
-  $answer2 = $_POST['answer2'];
 
-  $sql = "INSERT INTO `questions`(`id`, `fname`,`lname`,`answer1`, `answer2`) VALUES (NULL,'$fname','$lname','$answer1','$answer2')";
+//include "connections/connection.php";
+//if (isset($_POST["submit"])) {
+//  $fname = $_POST['fname'];
+//  $lname = $_POST['lname'];
+//  $answer1 = $_POST['answer1'];
+//  $answer2 = $_POST['answer2'];
 
-  $result = mysqli_query($conn, $sql);
+//  $sql = "INSERT INTO `questions`(`id`, `fname`,`lname`,`answer1`, `answer2`) VALUES (NULL,'$fname','$lname','$answer1','$answer2')";
 
-  if ($result) {
-     header("Location: modal2.php?msg=Your Results!");
-  } 
-  else {
-     echo "Failed: " . mysqli_error($conn);
-  }
-}
+ // $result = mysqli_query($conn, $sql);
 
+ // if ($result) {
+ //    header("Location: modal2.php?msg=Your Results!");
+ // } 
+ // else {
+ //    echo "Failed to load!" . mysqli_error($conn);
+ // }
+//}
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -29,6 +28,8 @@ if (isset($_POST["submit"])) {
             <meta content="width=device-width, initial-scale=1.0" name="viewport">
             <title> PSYC WEB </title>
             <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="css/style2.css">
+            <script src="js/script2.js" defer></script>
             <script src="js/script.js" defer></script>
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -50,9 +51,9 @@ if (isset($_POST["submit"])) {
     <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About (optional)</a> -->
   </div>
 
-   <!-- Navbar on small screens -->
+   <!-- Navbar on small screens
    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large">About</a> -->
+   <a href="#" class="w3-bar-item w3-button w3-padding-large">About</a> -->
   </div>
 </div> 
 
@@ -65,6 +66,49 @@ if (isset($_POST["submit"])) {
     Results and Feedback
   </nav>
 
+  <div id="modal" class="modal">
+    <div class="modal-content">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <div id="loading" class="loading"><div class="spinner"></div> <hr>
+    <h4 style="color: red; text-align: justify; padding: 3% 5%; font-size: 15px;" id="result"></h4>
+    <hr>
+    <button class="btn btn-secondary" onclick="checkText()"> Continue </button>
+    </div>
+</div>
+
+        
+    </div>
+</div>
+
+
+<script>
+function showModalWithLoading() {
+    // Show the modal and loading spinner
+    const modal = document.getElementById("modal");
+    modal.classList.add("show");
+    document.getElementById("loading").style.display = "flex";
+    document.getElementById("result").style.display = "none";
+    
+    // Simulate a delay (e.g., data processing) and then show the result
+    setTimeout(() => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("result").style.display = "block";
+        document.getElementById("result").innerText = "Your result goes here!";
+    }, 2000); // Adjust the delay as needed
+}
+
+function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.classList.remove("show");
+    modal.classList.add("hide");
+    
+    // Hide the modal after animation
+    setTimeout(() => {
+        modal.style.display = "none";
+        modal.classList.remove("hide");
+    }, 300); // Match the transition duration in CSS
+}
+</script>
 
 
   <div class= 'container'>
@@ -76,48 +120,44 @@ if (isset($_POST["submit"])) {
 </div>
 <div class="par">
 
-<?php
-    if (isset($_GET["msg"])) {
-      $msg = $_GET["msg"];
-      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert"><p id="result"></p>
-      ' . $msg . '
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
-    }
-    ?>
 
 </div>
 
-<div class="mb-3"><h4 style="color: red;" id="result"></h4>
+
+
+<div class="mb-3">
 
 <!-- <form action="" method="post"> -->
-  
+
+
+<form id="textForm">
 <br>
   <div class="input-group">
-  <span class="input-group-text"> Full Name </span>
-  <input type="text" name="fname" id="fname" placeholder="Enter your First Name" aria-label="First name" class="form-control" >
-  <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" aria-label="Last name" class="form-control" >
+  <span class="input-group-text" style="opacity: 80%;"> <b>Optional :</b> </span>
+  <input type="text" placeholder="Enter your First Name" aria-label="First name" class="form-control" >
+  <input type="text" placeholder="Enter your Last Name" aria-label="Last name" class="form-control" >
   </div>
   <br>
   
     <label for="answer1" class="form-label"><p class="slideup"> <b>Questions #1:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
     <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
 
-    <textarea class="form-control" id="answer1" rows="4" cols="50" placeholder="Enter your answer here!"></textarea>
+    <textarea class="form-control" id="answer1" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the questions above.</div>
     </div>
+
     <label for="answer2" class="form-label"><p class="slideup"> <b>Questions #2:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
     <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
-    <textarea class="form-control" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!"></textarea>
+    <textarea class="form-control" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the questions above.</div>
 
     <br>
     <!-- <button class="btn btn-secondary" onclick="checkText()" type="submit" name="submit"> Submit </button> -->
-    <button class="btn btn-secondary" onclick="checkText()"> Submit </button>
+    <button type="button" class="btn btn-secondary" onclick="checkText()"> Submit </button>
 
     </div>
      <br>
-    
+
     </form>
 
 </div>
@@ -148,14 +188,14 @@ if (isset($_POST["submit"])) {
 
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+//function myFunction() {
+//  var x = document.getElementById("navDemo");
+//  if (x.className.indexOf("w3-show") == -1) {
+//    x.className += " w3-show";
+//  } else { 
+//    x.className = x.className.replace(" w3-show", "");
+//  }
+//}
 </script>
         
 </html>
