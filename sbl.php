@@ -20,7 +20,7 @@ if (isset($_POST["submit"])) {
  $result = mysqli_query($conn, $sql);
 
   if ($result) {
-     header("Location: modal2.php?msg=Your Results!");
+     header("Location: modal.php?msg=Submitted Successfully!");
   } 
   else {
      echo "Failed to load!" . mysqli_error($conn);
@@ -209,15 +209,13 @@ if (isset($_POST["submit"])) {
 </div>
 </div>
   </div>
-<br>
-<br>
 </div>
 </div>
   </div>
 
 
   <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:200px 16px">
+<header class="w3-container w3-black w3-center" style="padding:35px 16px">
 </header>
 
 <!-- Footer -->

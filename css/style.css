@@ -78,8 +78,8 @@
   
   .slideup {
     line-height: 28px;
-    transform: translateY(100%); /* Start off-screen below */
-    opacity: 0; /* Start invisible */
+    transform: translateY(100%);
+    opacity: 0;
     animation: slideUp 0.8s ease-in-out forwards;
 }
 
@@ -367,6 +367,14 @@
           text-align: justify;
       }
     }
+
+    @media (max-width: 768px) {
+      p.slideup {
+          width: 100%;
+          text-align: justify;
+          font-size: 16px; /* Adjust font size for readability on smaller screens */
+      }
+  }
 
 
 

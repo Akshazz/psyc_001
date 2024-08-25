@@ -51,8 +51,8 @@
 <br>
 <h1 style="text-align: center; font-size: 35px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">CHOOSE YOUR BEST!</h1>
 <br>
-<hr style="margin: auto; margin-left: 400px; margin-right: 400px;"></hr><br>
-<p style="margin: auto; margin-left: 100px; margin-right: 100px; text-align: center; opacity: 60%; font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="slideup">
+<hr style="margin: auto; max-width: 60%;"></hr><br>
+<p style="margin: auto; max-width: 75%; text-align: center; opacity: 60%; font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="slideup">
 This section offers interactive learning experiences centered on essential emotional and social skills. Each category—Empathy, Self-Awareness, Social Skills, and Self-Regulation—features tailored resources like scenario-based learning, quizzes, assessments, and emotion recognition exercises. Choose a category to explore these tools and enhance your emotional intelligence through engaging and practical activities.
 </p>
 
@@ -149,7 +149,7 @@ This section offers interactive learning experiences centered on essential emoti
   </div>
 
   <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:200px 16px">
+<header class="w3-container w3-black w3-center" style="padding:100px 16px">
 </header>
 
 <!-- Footer -->
