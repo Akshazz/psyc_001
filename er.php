@@ -83,12 +83,10 @@
 </header>
 
 <!-- Footer -->
-<center>
-  <br>
-<div>
-      <p>© <span>Copyright</span> <strong class="px-1 sitename"> Aron N. </strong> <span>All Rights Reserved 2024</span></p>
-    </div>
-</center>
+<?php
+  echo '<br>';
+  include "include/footer.php";
+  ?>
 
 
 <script>

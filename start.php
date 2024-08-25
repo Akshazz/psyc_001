@@ -57,11 +57,12 @@ This section offers interactive learning experiences centered on essential emoti
 
 </div>
 
+<!--
     <table class="content-table">
         <tr>
             <td>
             <div class="label">
-            <p style="color: white; padding: 0px 20px; background-color: black; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EMPATHY</p><br>
+            <p style="color: black; padding: 0px 20px; background-color: white; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EMPATHY</p><br>
             <a style="text-align: left;" class="link1" href="modal2.php">Scenario Based Learning</a>
             <a style="text-align: left;" class="link1" href="qa.php">Quizzes & Assessment</a>
             <a style="text-align: left;" class="link1" href="er.php">Emotion Recognition</a>
@@ -69,7 +70,7 @@ This section offers interactive learning experiences centered on essential emoti
             </td>
             <td>
             <div class="label">
-            <p style="color: white; padding: 0px 20px; background-color: black; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SELF AWARENESS</p><br>
+            <p style="color: black; padding: 0px 20px; background-color: white; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SELF AWARENESS</p><br>
             <a style="text-align: left;" class="link1" href="modal2.php">Scenario Based Learning</a>
             <a style="text-align: left;" class="link1" href="qa.php">Quizzes & Assessment</a>
             <a style="text-align: left;" class="link1" href="er.php">Emotion Recognition</a>
@@ -77,7 +78,7 @@ This section offers interactive learning experiences centered on essential emoti
             </td>
             <td>
             <div class="label">
-            <p style="color: white; padding: 0px 20px; background-color: black; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SOCIAL SKILLS</p><br>
+            <p style="color: black; padding: 0px 20px; background-color: white; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SOCIAL SKILLS</p><br>
             <a style="text-align: left;" class="link1" href="modal2.php">Scenario Based Learning</a>
             <a style="text-align: left;" class="link1" href="qa.php">Quizzes & Assessment</a>
             <a style="text-align: left;" class="link1" href="er.php">Emotion Recognition</a>
@@ -85,7 +86,7 @@ This section offers interactive learning experiences centered on essential emoti
             </td>
             <td>
             <div class="label">
-            <p style="color: white; padding: 0px 20px; background-color: black; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SELF REGULATION</p><br>
+            <p style="color: black; padding: 0px 20px; background-color: white; opacity: 60%; width: auto; text-align: center; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SELF REGULATION</p><br>
             <a style="text-align: left;" class="link1" href="modal2.php">Scenario Based Learning</a>
             <a style="text-align: left;" class="link1" href="qa.php">Quizzes & Assessment</a>
             <a style="text-align: left;" class="link1" href="er.php">Emotion Recognition</a>
@@ -93,18 +94,10 @@ This section offers interactive learning experiences centered on essential emoti
             </td>
         </tr>
     </table>
-
-
-
-
-
-
-
+-->
+    
 <br>
-
-
-
-
+<center>
 <div class="dropdown">
   <span>Empathy</span>
   <div class="dropdown-content">
@@ -140,7 +133,7 @@ This section offers interactive learning experiences centered on essential emoti
   <a class="link1" href="er.php">Emotion Recognition</a>
   </div>
 </div>
-
+</center>
 
 </div>
 <br>
@@ -159,12 +152,10 @@ This section offers interactive learning experiences centered on essential emoti
 </header>
 
 <!-- Footer -->
-<center>
-  <br>
-<div>
-      <p>© <span>Copyright</span> <strong class="px-1 sitename"> Aron N. </strong> <span>All Rights Reserved 2024</span></p>
-    </div>
-</center>
+<?php
+  echo '<br>';
+  include "include/footer.php";
+  ?>
 
 
 <script>

@@ -138,19 +138,67 @@ function closeModal() {
   </div>
   <br>
   
-    <label for="answer1" class="form-label"><p class="slideup"> <b>Questions #1:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
-    <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
-
+    <label for="answer1" class="form-label"><p class="slideup"> <b style="color: red;">Questions #1:</b> Example question 1 here! </p>
+    </label>
     <textarea class="form-control" id="answer1" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the questions above.</div>
-    </div>
+    <br>
 
-    <label for="answer2" class="form-label"><p class="slideup"> <b>Questions #2:</b> One of your classmates, Alex, has been noticeably quiet and has missed several group activities lately. You’re concerned because Alex was usually very involved. Today, you see Alex sitting alone in the library, looking distressed.
-    <br><br><b>Prompt:</b> Write a response for how you would approach Alex to offer support and show empathy. Consider starting the conversation, listening to their concerns, and offering support.</p></label>
+    <label for="answer2" class="form-label"><p class="slideup"> <b style="color: red;">Questions #2:</b> Example question 2 here!</p>
+    </label>
     <textarea class="form-control" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the questions above.</div>
-
     <br>
+
+    <label for="answer3" class="form-label"><p class="slideup"> <b style="color: red;">Questions #3:</b> Example question 3 here!</p>
+    </label>
+    <textarea class="form-control" id="answer3" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+    <br>
+
+    <label for="answer4" class="form-label"><p class="slideup"> <b style="color: red;">Questions #4:</b> Example question 4 here!</p>
+    </label>
+    <textarea class="form-control" id="answer4" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+    <br>
+
+    <label for="answer5" class="form-label"><p class="slideup"> <b style="color: red;">Questions #5:</b> Example question 5 here!</p>
+    </label>
+    <textarea class="form-control" id="answer5" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+    <br>
+
+    <label for="answer6" class="form-label"><p class="slideup"> <b style="color: red;">Questions #6:</b> Example question 6 here!</p>
+    </label>
+    <textarea class="form-control" id="answer6" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+    <br>
+
+    <label for="answer7" class="form-label"><p class="slideup"> <b style="color: red;">Questions #7:</b> Example question 7 here!</p>
+    </label>
+    <textarea class="form-control" id="answer7" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+    <br>
+
+    <label for="answer8" class="form-label"><p class="slideup"> <b style="color: red;">Questions #8:</b> Example question 8 here!</p>
+    </label>
+    <textarea class="form-control" id="answer8" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+    <br>
+
+    <label for="answer9" class="form-label"><p class="slideup"> <b style="color: red;">Questions #9:</b> Example question 9 here!</p>
+    </label>
+    <textarea class="form-control" id="answer9" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+    <br>
+
+    <label for="answer10" class="form-label"><p class="slideup"> <b style="color: red;">Questions #10:</b> Example question 10 here!</p>
+    </label>
+    <textarea class="form-control" id="answer10" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
+    <div class="form-text">Please answer the questions above.</div>
+    <br>
+
+
     <!-- <button class="btn btn-secondary" onclick="checkText()" type="submit" name="submit"> Submit </button> -->
     <button type="button" class="btn btn-secondary" onclick="checkText()"> Submit </button>
 
@@ -177,12 +225,10 @@ function closeModal() {
 </header>
 
 <!-- Footer -->
-<center>
-  <br>
-<div>
-      <p>© <span>Copyright</span> <strong class="px-1 sitename"> Aron N. </strong> <span>All Rights Reserved 2024</span></p>
-    </div>
-</center>
+<?php
+  echo '<br>';
+  include "include/footer.php";
+  ?>
 
 
 <script>
