@@ -71,7 +71,7 @@ if (isset($_POST["submit"])) {
 
 
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
-  EMPATHY - QUIZZES & ASSESSMENT (QA)
+<p style="font-size: 20px; margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EMPATHY - QUIZZES & ASSESSMENT (QA)</p>
   </nav>
 
   <div class= 'container'>
@@ -96,7 +96,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide">
     <label for="answer1" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #1:</b> Example question 1 here! </p>
+      <p class="no-class"> <b style="color: red;">Question #1:</b> Example question 1 here! </p>
     </label>
     <textarea class="form-control" name="answer1" id="answer1" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -104,7 +104,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer2" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #2:</b> Example question 2 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #2:</b> Example question 2 here!</p>
     </label>
     <textarea class="form-control" name="answer2" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -112,7 +112,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer3" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
     </label>
     <textarea class="form-control" name="answer3" id="answer3" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -120,7 +120,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer4" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #4:</b> Example question 4 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #4:</b> Example question 4 here!</p>
     </label>
     <textarea class="form-control" name="answer4" id="answer4" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -128,7 +128,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer5" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #5:</b> Example question 5 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #5:</b> Example question 5 here!</p>
     </label>
     <textarea class="form-control" name="answer5" id="answer5" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -136,7 +136,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer6" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #6:</b> Example question 6 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #6:</b> Example question 6 here!</p>
     </label>
     <textarea class="form-control" name="answer6" id="answer6" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -144,7 +144,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer7" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #7:</b> Example question 7 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #7:</b> Example question 7 here!</p>
     </label>
     <textarea class="form-control" name="answer7" id="answer7" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -152,7 +152,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer8" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #8:</b> Example question 8 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #8:</b> Example question 8 here!</p>
     </label>
     <textarea class="form-control" name="answer8" id="answer8" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -160,7 +160,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer9" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #9:</b> Example question 9 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #9:</b> Example question 9 here!</p>
     </label>
     <textarea class="form-control" name="answer9" id="answer9" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -168,7 +168,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer10" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #10:</b> Example question 10 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #10:</b> Example question 10 here!</p>
     </label>
     <textarea class="form-control" name="answer10" id="answer10" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -177,7 +177,7 @@ if (isset($_POST["submit"])) {
   <!--
   <div class="question-slide" style="display: none;">
     <label for="answer2" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
     </label>
     <textarea class="form-control" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>

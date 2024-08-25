@@ -43,18 +43,16 @@
 <header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > <b>Get Started</b> > </p></fieldset>
 </header>
 
-<div class= 'container'>
+
 <div class="container_content">
-<div class="container_content_inner">
-
-    <br>
-  <h1 style="text-align: center; font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">CHOOSE YOUR BEST!</h1>
-  <hr>
 </div>
-<div class="par">
 
-<p style="text-align: justify; opacity: 60%; font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="slideup">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<br>
+<h1 style="text-align: center; font-size: 35px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">CHOOSE YOUR BEST!</h1>
+<br>
+<hr style="margin: auto; margin-left: 400px; margin-right: 400px;"></hr><br>
+<p style="margin: auto; margin-left: 100px; margin-right: 100px; text-align: center; opacity: 60%; font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="slideup">
 This section offers interactive learning experiences centered on essential emotional and social skills. Each category—Empathy, Self-Awareness, Social Skills, and Self-Regulation—features tailored resources like scenario-based learning, quizzes, assessments, and emotion recognition exercises. Choose a category to explore these tools and enhance your emotional intelligence through engaging and practical activities.
 </p>
 
@@ -104,7 +102,7 @@ This section offers interactive learning experiences centered on essential emoti
 <div class="dropdown">
   <span>Empathy</span>
   <div class="dropdown-content">
-  <a class="link1" href="modal2.php">Scenario Based Learning</a>
+  <a class="link1" href="sbl.php">Scenario Based Learning</a>
   <a class="link1" href="qa.php">Quizzes & Assessment</a>
   <a class="link1" href="er.php">Emotion Recognition</a>
   </div>
@@ -113,7 +111,7 @@ This section offers interactive learning experiences centered on essential emoti
 <div class="dropdown">
   <span>Self Awareness</span>
   <div class="dropdown-content">
-  <a class="link1" href="modal2.php">Scenario Based Learning</a>
+  <a class="link1" href="sbl.php">Scenario Based Learning</a>
   <a class="link1" href="qa.php">Quizzes & Assessment</a>
   <a class="link1" href="er.php">Emotion Recognition</a>
   </div>
@@ -122,7 +120,7 @@ This section offers interactive learning experiences centered on essential emoti
 <div class="dropdown">
   <span>Social Skills</span>
   <div class="dropdown-content">
-  <a class="link1" href="modal2.php">Scenario Based Learning</a>
+  <a class="link1" href="sbl.php">Scenario Based Learning</a>
   <a class="link1" href="qa.php">Quizzes & Assessment</a>
   <a class="link1" href="er.php">Emotion Recognition</a>
   </div>
@@ -131,7 +129,7 @@ This section offers interactive learning experiences centered on essential emoti
 <div class="dropdown">
   <span>Self Regulation</span>
   <div class="dropdown-content">
-  <a class="link1" href="modal2.php">Scenario Based Learning</a>
+  <a class="link1" href="sbl.php">Scenario Based Learning</a>
   <a class="link1" href="qa.php">Quizzes & Assessment</a>
   <a class="link1" href="er.php">Emotion Recognition</a>
   </div>

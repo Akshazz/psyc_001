@@ -73,7 +73,7 @@
   <p style="opacity: 60%; font-size: 18px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">LEARN MORE!</p>
 </div>
 <div class="par">
-<p style="text-align: justify;" class="slideup">
+<p style="text-align: justify;">
 Click here to dive deeper into the details and gain a clearer understanding of the topic. By following the link, you'll uncover more information, insights, and context. Whether you’re seeking specific data or a broader overview, this link will guide you to everything you need to know. Satisfy your curiosity with just one click.
 </p>
 </div>

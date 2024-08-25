@@ -71,7 +71,7 @@ if (isset($_POST["submit"])) {
 
 
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
-  <p style="font-size: 15px; margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EMPATHY - SCENARIO BASED LEARNING (SBL)</p>
+  <p style="font-size: 20px; margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EMPATHY - SCENARIO BASED LEARNING (SBL)</p>
   </nav>
 
   <div class= 'container'>

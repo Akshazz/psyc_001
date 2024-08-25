@@ -76,11 +76,23 @@
     overflow: hidden;
   }
   
-  .slideleft {
+  .slideup {
     line-height: 28px;
-    transform: translateX(300px);
-    animation: slideLeft .8s ease-in-out forwards .8s;
-  }
+    transform: translateY(100%); /* Start off-screen below */
+    opacity: 0; /* Start invisible */
+    animation: slideUp 0.8s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
   
   h1 {
       font-size: 40px;
@@ -330,7 +342,7 @@
   
       /* Admin mobile view table */
   @media (max-width: 768px) {
-    .container {
+    .container p{
         width: 90%;
         overflow-x: auto;
     }

@@ -71,7 +71,7 @@ if (isset($_POST["submit"])) {
 
 
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
-  EMPATHY - EMOTIONAL RECOGNATION (ER)
+<p style="font-size: 20px; margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EMPATHY - EMOTIONAL RECOGNATION (ER)</p>
   </nav>
 
   <div class= 'container'>
@@ -96,7 +96,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide">
     <label for="answer1" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #1:</b> Example question 1 here! </p>
+      <p class="no-class"> <b style="color: red;">Question #1:</b> Example question 1 here! </p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image1.png"/>
@@ -108,7 +108,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer2" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #2:</b> Example question 2 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #2:</b> Example question 2 here!</p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image2.jpg"/>
@@ -120,7 +120,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer3" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image3.jpg"/>
@@ -132,7 +132,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer4" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #4:</b> Example question 4 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #4:</b> Example question 4 here!</p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image4.jpg"/>
@@ -144,7 +144,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer5" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #5:</b> Example question 5 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #5:</b> Example question 5 here!</p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image5.jpg"/>
@@ -156,7 +156,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer6" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #6:</b> Example question 6 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #6:</b> Example question 6 here!</p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image6.jpg"/>
@@ -168,7 +168,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer7" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #7:</b> Example question 7 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #7:</b> Example question 7 here!</p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image7.jpg"/>
@@ -180,7 +180,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer8" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #8:</b> Example question 8 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #8:</b> Example question 8 here!</p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image8.jpg"/>
@@ -192,7 +192,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer9" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #9:</b> Example question 9 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #9:</b> Example question 9 here!</p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image9.png"/>
@@ -204,7 +204,7 @@ if (isset($_POST["submit"])) {
 
   <div class="question-slide" style="display: none;">
     <label for="answer10" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #10:</b> Example question 10 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #10:</b> Example question 10 here!</p>
     </label>
     <div>
     <img style="width: 200px; height: 200px" src="images/image10.jpg"/>
@@ -217,7 +217,7 @@ if (isset($_POST["submit"])) {
   <!--
   <div class="question-slide" style="display: none;">
     <label for="answer2" class="form-label">
-      <p class="slideup"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
     </label>
     <textarea class="form-control" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>

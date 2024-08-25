@@ -13,7 +13,7 @@ function checkText() {
     const answer10 = document.getElementById("answer10").value.toLowerCase();
 
     // Combine all input texts into one string
-    const combinedText = answer1 + " " + answer2;
+    const combinedText = answer1 + " " + answer2 + " " + answer3 + " " + answer4 + " " + answer5 + " " + answer6 + " " + answer7 + " " + answer8 + " " + answer9 + " " + answer10;
 
     // Words for detection
     const emotions = ["sad", "happy", "care"];
@@ -25,19 +25,19 @@ function checkText() {
     // Check for emotions
     if (emotions.some(word => combinedText.includes(word))) {
         result += `
-        <p style="color: black;"> This is the result for ('Sad, Happy, Care' users input!) </p>`;
+        <p style="color: black;"> This is the result for ('Sad, Happy, Care') users input! </p>`;
     }
 
     // Check for farewells
     if (farewells.some(word => combinedText.includes(word))) {
         result += `
-        <p style="color: black;"> This is the result for ('Bye!, Goodbye!, See you!' users input!) </p>`;
+        <p style="color: black;"> This is the result for ('Bye!, Goodbye!, See you!') users input! </p>`;
     }
 
     // Check for gratitude
     if (gratitude.some(word => combinedText.includes(word))) {
         result += `
-        <p style="color: black;"> This is the result for ('Thanks!, Thank you!, Appreciate!' users input!) </p>`;
+        <p style="color: black;"> This is the result for ('Thanks!, Thank you!, Appreciate!') users input! </p>`;
     }
 
     // If no words detected
