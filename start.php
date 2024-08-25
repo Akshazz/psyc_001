@@ -28,11 +28,14 @@
     </a>
 
     <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About (optional)</a> -->
+
   </div>
 
    <!-- Navbar on small screens -->
    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large">About</a> -->
+    <a href="#" style="transition: 0.5s; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black; font-size: 15px;  padding: 10px 20px;" class="w3-bar-item w3-button w3-padding-large"> Service </a>
+    <a href="#" style="transition: 0.5s; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black; font-size: 15px;  padding: 10px 20px;" class="w3-bar-item w3-button w3-padding-large"> FAQ </a>
+    <a href="#" style="transition: 0.5s; text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black; font-size: 15px;  padding: 10px 20px;" class="w3-bar-item w3-button w3-padding-large"> About </a>
   </div>
 </div> 
 
@@ -95,7 +98,7 @@ This section offers interactive learning experiences centered on essential emoti
         </tr>
     </table>
 -->
-    
+
 <br>
 <center>
 <div class="dropdown">

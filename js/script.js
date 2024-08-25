@@ -3,6 +3,14 @@ function checkText() {
     // Get the input from all text areas
     const answer1 = document.getElementById("answer1").value.toLowerCase();
     const answer2 = document.getElementById("answer2").value.toLowerCase();
+    const answer3 = document.getElementById("answer3").value.toLowerCase();
+    const answer4 = document.getElementById("answer4").value.toLowerCase();
+    const answer5 = document.getElementById("answer5").value.toLowerCase();
+    const answer6 = document.getElementById("answer6").value.toLowerCase();
+    const answer7 = document.getElementById("answer7").value.toLowerCase();
+    const answer8 = document.getElementById("answer8").value.toLowerCase();
+    const answer9 = document.getElementById("answer9").value.toLowerCase();
+    const answer10 = document.getElementById("answer10").value.toLowerCase();
 
     // Combine all input texts into one string
     const combinedText = answer1 + " " + answer2;
@@ -16,37 +24,27 @@ function checkText() {
 
     // Check for emotions
     if (emotions.some(word => combinedText.includes(word))) {
-        result += "Effective Emotional Validation: You effectively recognized and validated emotions in most scenarios. This includes acknowledging feelings and providing encouragement in situations of joy, sadness, and embarrassment. ";
+        result += `
+        <p style="color: black;"> This is the result for ('Sad, Happy, Care' users input!) </p>`;
     }
 
     // Check for farewells
     if (farewells.some(word => combinedText.includes(word))) {
         result += `
-        <p style="color: black;">Supportive Responses: Your ability to offer support and practical help was notable, especially when dealing with positive or negative emotions.</p>
-        <p>Tips to Enhance:</p>
-        <ul>
-            <li>Keep providing support that is both emotional and practical. Offering specific ways to help can deepen your empathetic interactions.</li>
-            <li>Engage in role-playing exercises to practice different supportive responses.</li>
-        </ul>
-    `;
-}
+        <p style="color: black;"> This is the result for ('Bye!, Goodbye!, See you!' users input!) </p>`;
+    }
 
     // Check for gratitude
     if (gratitude.some(word => combinedText.includes(word))) {
-        result += "You expressed gratitude! ";
+        result += `
+        <p style="color: black;"> This is the result for ('Thanks!, Thank you!, Appreciate!' users input!) </p>`;
     }
 
     // If no words detected
    // If no words detected
    if (!result) {
     result = `
-        <p style="color: black;">Providing More Nuanced Emotional Support: In scenarios involving frustration, anxiety, and stress, your responses sometimes lacked depth. Rather than offering general reassurance, a more tailored approach addressing the specific concerns would be beneficial.</p>
-        <p>Tips for Improvement:</p>
-        <ul>
-            <li>Active Listening: Engage more deeply with the individual's concerns by asking open-ended questions to better understand their feelings.</li>
-            <li>Personalized Support: Offer practical solutions or assistance relevant to their specific situation. For instance, if someone is stressed about a deadline, help them plan or manage their tasks.</li>
-        </ul>
-    `;
+        <p style="color: black;"> Undefine/No words input by the users!  </p>`;
 }
 
 

@@ -11,7 +11,7 @@
     padding: 10px 20px;
     border-radius: 15px 15px 15px 15px;
     font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
 }
 .start:hover{
@@ -40,7 +40,7 @@
     margin: 10px;
     border-radius: 15px 15px 15px 15px;
     font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
 }
 .intro{
@@ -76,10 +76,10 @@
     overflow: hidden;
   }
   
-  .slideup {
+  .slideleft {
     line-height: 28px;
-    transform: translateY(300px);
-    animation: slideUp .8s ease-in-out forwards .8s;
+    transform: translateX(300px);
+    animation: slideLeft .8s ease-in-out forwards .8s;
   }
   
   h1 {
@@ -124,14 +124,14 @@
   }
 
   /* start mobile view buttons */
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .dropdown {
         display: block;
         width: 100%;
-        overflow-x: auto;
         border: 0;
     }
   }
+  
   /* dropdown */
   .dropdown {
     position: relative;
@@ -310,5 +310,53 @@
       width: 120px;
   }
 }
+
+
+/* Admin mobile view table */
+@media (max-width: 768px) {
+  .table {
+      width: 100%;
+      overflow-x: auto; /* Allows horizontal scrolling if needed */
+  }
+}
+
+  /* Admin mobile view table */
+  @media (max-width: 768px) {
+    .slideup p {
+        width: 100%;
+        overflow-x: auto; /* Allows horizontal scrolling if needed */
+    }
+  }
+  
+      /* Admin mobile view table */
+  @media (max-width: 768px) {
+    .container {
+        width: 90%;
+        overflow-x: auto;
+    }
+  }
+  
+    @media (max-width: 768px) {
+      .container_content {
+          width: 90%;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .container_content_inner p, hr{
+          width: 90%;
+          text-align: justify;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .start2 a{
+          width: 90%;
+          text-align: justify;
+      }
+    }
+
+
+
 
 

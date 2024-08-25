@@ -64,7 +64,7 @@ if (isset($_POST["submit"])) {
 <div class="container_content_inner">
 <div class="title">
     <br>
-  <h1 class="none">EXAMPLE: SCENARIO BASED LEARNING (SBL)</h1>
+  <h3 class="none"><b>EXAMPLE: SCENARIO BASED LEARNING (SBL)</b></h3>
 </div>
 <div class="par">
 </div>

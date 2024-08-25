@@ -47,7 +47,7 @@ include "../connections/connection.php";
   <a style="text-align: left; color: red;" class="btn btn-dark" href="admin_dashboard.php"> SBL </a>
   <a style="text-align: left; color: red;" class="btn btn-dark" href="qa_admin_dashboard.php"> QA </a>
   <a style="text-align: left; color: red;" class="btn btn-dark" href="er_admin_dashboard.php"> ER </a>
-  <b style="font-size: 20px;"> | ADMIN - SBL Databases</b>
+  <b style="font-size: 20px;"> | ADMIN - ER Databases</b>
   </nav>
 
   <div class="container">
@@ -81,7 +81,7 @@ include "../connections/connection.php";
       </thead>
       <tbody>
         <?php
-        $sql = "SELECT * FROM `questions`";
+        $sql = "SELECT * FROM `questions3`";
         $result = mysqli_query($conn, $sql);
         $count=$result->num_rows;
         while ($row = mysqli_fetch_assoc($result)) {
