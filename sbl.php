@@ -46,6 +46,9 @@ if (isset($_POST["submit"])) {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
 
+
+
+
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card w3-left-align w3-large">
@@ -82,7 +85,6 @@ if (isset($_POST["submit"])) {
 </div>
 <div class="par">
 </div>
-
 
 <div class="mb-2">
  <form action="" method="post">
@@ -187,31 +189,35 @@ if (isset($_POST["submit"])) {
     </button>
     &nbsp;&nbsp;&nbsp;  <button type="button" class="btn btn-dark" id="submitBtn" onclick="checkText()"> Submit Now! </button>
 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
     <div id="modal" class="modal">
     <div class="modal-content">
     <span class="close-button" onclick="closeModal()">&times;</span>
     <div id="loading" class="loading"><div class="spinner"></div> <hr>
+
     <h4 style="color: black; text-align: justify; padding: 3% 5%; font-size: 15px;" id="result"></h4>
     <hr>
-    <button id="modal" type="submit" name="submit" class="btn btn-secondary" onclick="checkText()"> Continue </button>
+    <button id="modal" type="submit" name="submit" class="btn btn-secondary" onclick="validateForm()"> Continue </button>
     
     </div>
-  </div>   
-  </div>
-  
-  </div>
+    </div>   
+    </div>
+    </div>
+
+    <script src="js/alert.js" defer></script>
+
+
 </form>
 
 </div>
 <br>
 <br>
-</div>
-</div>
-  </div>
-</div>
-</div>
-  </div>
 
 
   <!-- Header -->

@@ -197,34 +197,36 @@ if (isset($_POST["submit"])) {
     </svg>
     </button>
     &nbsp;&nbsp;&nbsp;  <button type="button" class="btn btn-dark" id="submitBtn" onclick="checkText()"> Submit Now! </button>
-
+    
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
     <div id="modal" class="modal">
     <div class="modal-content">
     <span class="close-button" onclick="closeModal()">&times;</span>
     <div id="loading" class="loading"><div class="spinner"></div> <hr>
+
     <h4 style="color: black; text-align: justify; padding: 3% 5%; font-size: 15px;" id="result"></h4>
     <hr>
-    <button id="modal" type="submit" name="submit" class="btn btn-secondary" onclick="checkText()"> Continue </button>
+    <button id="modal" type="submit" name="submit" class="btn btn-secondary" onclick="validateForm()"> Continue </button>
     
     </div>
-  </div>   
-  </div>
-  
-  </div>
+    </div>   
+    </div>
+    </div>
+
+    <script src="js/alert.js" defer></script>
+
+
 </form>
 
 </div>
 <br>
 <br>
-</div>
-</div>
-  </div>
-<br>
-<br>
-</div>
-</div>
-  </div>
 
 
   <!-- Header -->

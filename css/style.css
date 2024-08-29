@@ -177,6 +177,7 @@
     font-size: 12px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     opacity: 80%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   .link1{
     text-decoration: none;
@@ -375,6 +376,9 @@
           font-size: 16px; /* Adjust font size for readability on smaller screens */
       }
   }
+
+
+  
 
 
 
