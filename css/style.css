@@ -376,7 +376,9 @@
           font-size: 16px; /* Adjust font size for readability on smaller screens */
       }
   }
-
+textarea {
+  scroll-padding-block: 15px;
+}
 
   
 
