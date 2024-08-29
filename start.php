@@ -9,6 +9,7 @@
             <meta charset="utf-8">
             <meta content="width=device-width, initial-scale=1.0" name="viewport">
             <title> PSYC WEB </title>
+            <link rel="icon" href="logo/based.png" type="image/png">
             <link rel="stylesheet" href="css/style.css">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">

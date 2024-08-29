@@ -7,9 +7,11 @@
 <html>
     <body>
         <head>
+            
             <meta charset="utf-8">
             <meta content="width=device-width, initial-scale=1.0" name="viewport">
             <title> PSYC WEB </title>
+            <link rel="icon" href="logo/based.png" type="image/png">
             <link rel="stylesheet" href="css/style.css">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -55,7 +57,7 @@
 <header class="w3-container w3-black w3-center" style="padding:100px 5px">
   
 <div class="title">
-  <h1 class="w3-margin w3-jumbo">Hi there!</h1>
+  <h1 class="w3-margin w3-jumbo"><img src="logo/logo2.png" width="125" height="120"> Hi there! </h1>
 
   <p style="margin: auto; max-width: 65%; text-align: center; opacity: 60%; font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="slideup"> We’re excited to help you enhance your emotional intelligence, focusing on key areas like empathy, social skills, self-awareness, and self-regulation. Our AI-based training website is designed to provide you with personalized support and practical tools to help you grow. Together, we can work on boosting your EI and empowering you to navigate life’s challenges with greater confidence. </p>
 <hr>
