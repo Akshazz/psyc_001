@@ -1,5 +1,5 @@
 <?php
-
+include "ip_check.php";
 include "connections/connection.php";
 if (isset($_POST["submit"])) {
   $fname = $_POST['fname'];
@@ -45,9 +45,6 @@ if (isset($_POST["submit"])) {
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
-
-
-
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -203,13 +200,21 @@ if (isset($_POST["submit"])) {
 
     <h4 style="color: black; text-align: justify; padding: 3% 5%; font-size: 15px;" id="result"></h4>
     <hr>
-    <button id="modal" type="submit" name="submit" class="btn btn-secondary" onclick="validateForm()"> Continue </button>
+    <input type="hidden" name="submitted" value="1">
+    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Continue</button>
+    
+    
+    
+    <!-- <button id="modal" type="submit" value="submit" name="submit" class="btn btn-secondary" onclick="validateForm()"
+> Continue </button> -->
     
     </div>
     </div>   
     </div>
-    </div>
+</div>
 
+   
+    <!-- <script src="js/restriction.js" defer></script> -->
     <script src="js/alert.js" defer></script>
 
 

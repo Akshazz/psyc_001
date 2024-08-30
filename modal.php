@@ -54,7 +54,8 @@ session_start();
     <?php
     if (isset($_GET["msg"])) {
       $msg = $_GET["msg"];
-      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert"><p style="max-width: 50%; text-align: center;" id="result"></p>
+      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert"><p style="max-width: 50%; text-align: center;" id="result">    <div id="result"></div>
+    <div id="success"></div></p>
       ' . $msg . '
     </div>';
     }
