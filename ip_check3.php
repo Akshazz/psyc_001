@@ -24,7 +24,7 @@ $restriction_time = 1 * 60; // 42 hours * 60 minutes/hour * 60 seconds/minute
 // Check if the IP address is in the log and if the time since the last submission is less than 42 hours
 if (isset($log_data[$user_ip]) && (time() - $log_data[$user_ip] < $restriction_time)) {
     if (isset($_POST['submitted'])) {
-        header("Location: sbl.php?msg=You must wait 60 seconds before submitting again!");
+        header("Location: er.php?msg=You must wait 60 seconds before submitting again!");
         // Restriction applied only if form was submitted
         $response['success'] = false;
         $response['message'] = 'You must wait 60 seconds before submitting again.';

@@ -1,5 +1,5 @@
 <?php
-
+include "ip_check2.php";
 include "connections/connection.php";
 if (isset($_POST["submit"])) {
   $fname = $_POST['fname'];
@@ -15,17 +15,18 @@ if (isset($_POST["submit"])) {
   $answer9 = $_POST['answer9'];
   $answer10 = $_POST['answer10'];
 
-  $sql = "INSERT INTO `questions`(`id`, `fname`,`lname`,`answer1`, `answer2`,`answer3`,`answer4`,`answer5`,`answer6`,`answer7`,`answer8`,`answer9`,`answer10`) VALUES (NULL,'$fname','$lname','$answer1','$answer2','$answer3','$answer4','$answer5','$answer6','$answer7','$answer8','$answer9','$answer10')";
+  $sql = "INSERT INTO `questions2`(`id`, `fname`,`lname`,`answer1`, `answer2`,`answer3`,`answer4`,`answer5`,`answer6`,`answer7`,`answer8`,`answer9`,`answer10`) VALUES (NULL,'$fname','$lname','$answer1','$answer2','$answer3','$answer4','$answer5','$answer6','$answer7','$answer8','$answer9','$answer10')";
 
  $result = mysqli_query($conn, $sql);
 
   if ($result) {
-     header("Location: modal2.php?msg=Your Results!");
+     header("Location: qa.php?msg=Hello there! Your form has been successfully submitted. Thank you, and have a wonderful day!");
   } 
   else {
      echo "Failed to load!" . mysqli_error($conn);
   }
   }
+
 ?>
 
 <!DOCTYPE html>
@@ -78,11 +79,23 @@ if (isset($_POST["submit"])) {
 <div class="container_content">
 <div class="container_content_inner">
 <div class="title">
-  <p class="none"> <b>Directions:</b> You have ten (10) questions to answer. Before you submit, please take a moment to carefully review your answers to ensure they are complete and accurate. </p>
+
+
+<?php
+    if (isset($_GET["msg"])) {
+      $msg = $_GET["msg"];
+      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert"><p style="max-width: 50%; text-align: center;">
+    <div id="success"></div></p>
+      ' . $msg . '
+    </div>';
+    }
+    ?>
+    <br>
+
+    <p class="none"> <b>Directions:</b> You have ten (10) questions to answer. Before you submit, please take a moment to carefully review your answers to ensure they are complete and accurate. </p>
 </div>
 <div class="par">
 </div>
-
 
 <div class="mb-2">
  <form action="" method="post">
@@ -173,17 +186,6 @@ if (isset($_POST["submit"])) {
     <textarea class="form-control" name="answer10" id="answer10" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
-
-  <!--
-  <div class="question-slide" style="display: none;">
-    <label for="answer2" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
-    </label>
-    <textarea class="form-control" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div> -->
-
-  <!-- Repeat for the other questions -->
   
   <div id="navigation"><br>
     <button type="button" class="btn btn-secondary" id="prevBtn" onclick="showPrev()">
@@ -208,17 +210,52 @@ if (isset($_POST["submit"])) {
     <div id="modal" class="modal">
     <div class="modal-content">
     <span class="close-button" onclick="closeModal()">&times;</span>
-    <div id="loading" class="loading"><div class="spinner"></div> <hr>
 
-    <h4 style="color: black; text-align: justify; padding: 3% 5%; font-size: 15px;" id="result"></h4>
-    <hr>
-    <button id="modal" type="submit" name="submit" class="btn btn-secondary" onclick="validateForm()"> Continue </button>
+
+    <img style="display: block; margin-left: auto; margin-right: auto; width: 40%;" src="logo/logo.png" height="30%">&nbsp;&nbsp;&nbsp;
+    <div class="dot-container">
+    
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <br>
+    <div class="container">
+        <h4 style="font-size: 15px; text-align: justify;" id="result"></h4>
+    </div><hr>
+
+    <!-- animated type text js -->
+    <script>
+        const text = "This is the text to display.";
+        const speed = 100;  // typing speed in milliseconds
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("typing").textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        window.onload = typeWriter;
+    </script>
+
+    <input type="hidden" name="submitted" value="1">
+    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Continue</button>
+    
+    
+    
+    <!-- <button id="modal" type="submit" value="submit" name="submit" class="btn btn-secondary" onclick="validateForm()"
+> Continue </button> -->
     
     </div>
     </div>   
     </div>
     </div>
 
+   
+    <!-- <script src="js/restriction.js" defer></script> -->
     <script src="js/alert.js" defer></script>
 
 
