@@ -112,27 +112,27 @@ This section offers interactive learning experiences centered on essential emoti
 <div class="dropdown">
   <span>Self Awareness</span>
   <div class="dropdown-content">
-  <a class="link1" href="sbl.php">Scenario Based Learning</a>
-  <a class="link1" href="qa.php">Quizzes & Assessment</a>
-  <a class="link1" href="er.php">Emotion Recognition</a>
+  <a class="link1" href="sa_sbl.php">Scenario Based Learning</a>
+  <a class="link1" href="sa_qa.php">Quizzes & Assessment</a>
+  <a class="link1" href="sa_er.php">Emotion Recognition</a>
   </div>
 </div>
 
 <div class="dropdown">
   <span>Social Skills</span>
   <div class="dropdown-content">
-  <a class="link1" href="sbl.php">Scenario Based Learning</a>
-  <a class="link1" href="qa.php">Quizzes & Assessment</a>
-  <a class="link1" href="er.php">Emotion Recognition</a>
+  <a class="link1" href="ss_sbl.php">Scenario Based Learning</a>
+  <a class="link1" href="ss_qa.php">Quizzes & Assessment</a>
+  <a class="link1" href="ss_er.php">Emotion Recognition</a>
   </div>
 </div>
 
 <div class="dropdown">
   <span>Self Regulation</span>
   <div class="dropdown-content">
-  <a class="link1" href="sbl.php">Scenario Based Learning</a>
-  <a class="link1" href="qa.php">Quizzes & Assessment</a>
-  <a class="link1" href="er.php">Emotion Recognition</a>
+  <a class="link1" href="sr_sbl.php">Scenario Based Learning</a>
+  <a class="link1" href="sr_qa.php">Quizzes & Assessment</a>
+  <a class="link1" href="sr_er.php">Emotion Recognition</a>
   </div>
 </div>
 </center>

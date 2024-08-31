@@ -1,5 +1,5 @@
 <?php
-include "ip_check3.php";
+include "ip_check.php";
 include "connections/connection.php";
 if (isset($_POST["submit"])) {
   $fname = $_POST['fname'];
@@ -15,7 +15,7 @@ if (isset($_POST["submit"])) {
   $answer9 = $_POST['answer9'];
   $answer10 = $_POST['answer10'];
 
-  $sql = "INSERT INTO `questions3`(`id`, `fname`,`lname`,`answer1`, `answer2`,`answer3`,`answer4`,`answer5`,`answer6`,`answer7`,`answer8`,`answer9`,`answer10`) VALUES (NULL,'$fname','$lname','$answer1','$answer2','$answer3','$answer4','$answer5','$answer6','$answer7','$answer8','$answer9','$answer10')";
+  $sql = "INSERT INTO `questions`(`id`, `fname`,`lname`,`answer1`, `answer2`,`answer3`,`answer4`,`answer5`,`answer6`,`answer7`,`answer8`,`answer9`,`answer10`) VALUES (NULL,'$fname','$lname','$answer1','$answer2','$answer3','$answer4','$answer5','$answer6','$answer7','$answer8','$answer9','$answer10')";
 
  $result = mysqli_query($conn, $sql);
 
@@ -53,12 +53,12 @@ include "include/header.php";
 </div> 
 
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > Get Started > <b>Empathy (Emotional Recognation)</b> ></p></fieldset>
+<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > Get Started > <b>Social Skills (Scenario Based Learning)</b> > </p></fieldset>
 </header>
 
 
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
-<p style="font-size: 20px; margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EMPATHY - EMOTIONAL RECOGNATION (ER)</p>
+  <p style="font-size: 20px; margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SOCIAL SKILLS - SCENARIO BASED LEARNING (SBL)</p>
   </nav>
 
   <div class= 'container'>
@@ -76,13 +76,12 @@ include "include/header.php";
     </div>';
     }
     ?>
-    <br>
+<br>
 
   <p class="none"> <b>Directions:</b> You have ten (10) questions to answer. Before you submit, please take a moment to carefully review your answers to ensure they are complete and accurate. </p>
 </div>
 <div class="par">
 </div>
-
 
 <div class="mb-2">
  <form action="" method="post">
@@ -98,10 +97,6 @@ include "include/header.php";
     <label for="answer1" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #1:</b> Example question 1 here! </p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image1.png"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer1" id="answer1" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
@@ -110,10 +105,6 @@ include "include/header.php";
     <label for="answer2" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #2:</b> Example question 2 here!</p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image2.jpg"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer2" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
@@ -122,10 +113,6 @@ include "include/header.php";
     <label for="answer3" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image3.jpg"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer3" id="answer3" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
@@ -134,10 +121,6 @@ include "include/header.php";
     <label for="answer4" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #4:</b> Example question 4 here!</p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image4.jpg"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer4" id="answer4" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
@@ -146,10 +129,6 @@ include "include/header.php";
     <label for="answer5" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #5:</b> Example question 5 here!</p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image5.jpg"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer5" id="answer5" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
@@ -158,10 +137,6 @@ include "include/header.php";
     <label for="answer6" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #6:</b> Example question 6 here!</p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image6.jpg"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer6" id="answer6" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
@@ -170,10 +145,6 @@ include "include/header.php";
     <label for="answer7" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #7:</b> Example question 7 here!</p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image7.jpg"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer7" id="answer7" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
@@ -182,10 +153,6 @@ include "include/header.php";
     <label for="answer8" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #8:</b> Example question 8 here!</p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image8.jpg"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer8" id="answer8" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
@@ -194,10 +161,6 @@ include "include/header.php";
     <label for="answer9" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #9:</b> Example question 9 here!</p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image9.png"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer9" id="answer9" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
@@ -206,14 +169,10 @@ include "include/header.php";
     <label for="answer10" class="form-label">
       <p class="no-class"> <b style="color: red;">Question #10:</b> Example question 10 here!</p>
     </label>
-    <div>
-    <img style="width: 200px; height: 200px" src="images/image10.jpg"/>
-    </div>
-    <br>
     <textarea class="form-control" name="answer10" id="answer10" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
-
+  
   <div id="navigation"><br>
     <button type="button" class="btn btn-secondary" id="prevBtn" onclick="showPrev()">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
@@ -226,7 +185,7 @@ include "include/header.php";
     </svg>
     </button>
     &nbsp;&nbsp;&nbsp;  <button type="button" class="btn btn-dark" id="submitBtn" onclick="checkText()"> Submit Now! </button>
-    
+
 </div>
 </div>
 </div>
@@ -238,7 +197,7 @@ include "include/header.php";
     <div class="modal-content">
     <span class="close-button" onclick="closeModal()">&times;</span>
 
-
+  
     <img style="display: block; margin-left: auto; margin-right: auto; width: 40%;" src="logo/logo.png" height="30%">&nbsp;&nbsp;&nbsp;
     <div class="dot-container">
     
@@ -294,7 +253,7 @@ include "include/header.php";
 
 
   <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding: 35px 16px">
+<header class="w3-container w3-black w3-center" style="padding:35px 16px">
 </header>
 
 <!-- Footer -->
@@ -323,3 +282,4 @@ include "include/header.php";
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+

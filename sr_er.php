@@ -53,12 +53,12 @@ include "include/header.php";
 </div> 
 
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > Get Started > <b>Empathy (Emotional Recognation)</b> ></p></fieldset>
+<header class="w3-container w3-black w3-center" style="padding:100px 16px"><fieldset class="field"> <p class="tab1"> Home > Get Started > <b>Self Regulation (Emotional Recognation)</b> ></p></fieldset>
 </header>
 
 
 <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightgrey;">
-<p style="font-size: 20px; margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">EMPATHY - EMOTIONAL RECOGNATION (ER)</p>
+<p style="font-size: 20px; margin-top: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SELF REGULATION - EMOTIONAL RECOGNATION (ER)</p>
   </nav>
 
   <div class= 'container'>

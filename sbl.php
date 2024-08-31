@@ -20,7 +20,7 @@ if (isset($_POST["submit"])) {
  $result = mysqli_query($conn, $sql);
 
   if ($result) {
-     header("Location: sbl.php?msg=Hello there! Your form has been successfully submitted. Thank you, and have a wonderful day!");
+     header("Location: ?msg=Hello there! Your form has been successfully submitted. Thank you, and have a wonderful day!");
   } 
   else {
      echo "Failed to load!" . mysqli_error($conn);
@@ -29,23 +29,9 @@ if (isset($_POST["submit"])) {
 
 ?>
 
-<!DOCTYPE html>
-<html>
-    <body>
-        <head>
-            <meta charset="utf-8">
-            <meta content="width=device-width, initial-scale=1.0" name="viewport">
-            <title> PSYC WEB </title>
-            <link rel="stylesheet" href="css/style.css">
-            <link rel="stylesheet" href="css/style2.css">
-            <script src="js/script2.js" defer></script>
-            <script src="js/script.js" defer></script>
-            <script src="js/spinner.js" defer></script>
-            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        </head>
+<?php
+include "include/header.php";
+?>
 
 <!-- Navbar -->
 <div class="w3-top">
