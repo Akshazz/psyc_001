@@ -1,85 +1,115 @@
-let currentQuestion = 0; // Keep track of the current question index
 
-// Define the correct answers
-const correctAnswers = {
-    answer1: "True",
-    answer2: "False",
-    answer3: "False",
-    answer4: "True",
-    answer5: "True"
-};
+    let currentQuestion = 1; // Keep track of the current question index
+    const totalQuestions = 5;
 
-// Define emotional results based on the answers
-const emotionalResults = {
-    True: "This answer reflects an understanding of empathy.",
-    False: "This answer may indicate a misunderstanding of emotional concepts."
-};
 
-// Function to show the next question
-function nextQuestion(questionIndex) {
-    // Hide current question
-    document.getElementById(`question${questionIndex}`).style.display = "none";
-    currentQuestion = questionIndex;
+    // Function to show the next question
+    function nextQuestion(questionIndex) {
+        document.getElementById(`question${questionIndex}`).style.display = "none";
+        currentQuestion = questionIndex + 1;
 
-    // Show the next question if it exists
-    if (currentQuestion < 5) {
-        currentQuestion++;
-        document.getElementById(`question${currentQuestion}`).style.display = "block";
-    } else {
-        // If no more questions, submit answers
-        submitAnswers();
-    }
-}
-
-// Function to show the previous question
-function previousQuestion(questionIndex) {
-    // Hide current question
-    document.getElementById(`question${questionIndex}`).style.display = "none";
-    currentQuestion = questionIndex - 1; // Move to the previous question
-    document.getElementById(`question${currentQuestion}`).style.display = "block"; // Show it
-}
-
-// Function to submit the answers and show the results
-function submitAnswers() {
-    // Get the selected values from each dropdown
-    const answers = [
-        document.getElementById("answer1").value,
-        document.getElementById("answer2").value,
-        document.getElementById("answer3").value,
-        document.getElementById("answer4").value,
-        document.getElementById("answer5").value
-    ];
-
-    // Initialize result array to hold messages
-    let result = [];
-    let score = 0; // Score to count correct answers
-
-    // Check each answer and create corresponding messages
-    answers.forEach((answer, index) => {
-        if (answer) {
-            result.push(`Question ${index + 1}: Your answer is ${answer}.`);
-            if (answer === correctAnswers[`answer${index + 1}`]) {
-                result.push("This answer is Correct!");
-                score++;
-            } else {
-                result.push("This answer is Incorrect.");
-            }
-
-            // Add emotional analysis based on the answer
-            result.push(emotionalResults[answer]);
-        } else {
-            result.push(`Question ${index + 1}: No answer selected.`);
+        if (currentQuestion <= totalQuestions) {
+            document.getElementById(`question${currentQuestion}`).style.display = "block";
         }
-    });
+    }
 
-    // Prepare the final result message with score
-    result.push(`<br/>Your total score: ${score} out of ${answers.length}.`);
-    const resultElement = document.getElementById("result");
-    resultElement.innerHTML = result.join("<br/>"); // Display results line by line
-    document.getElementById("modal").style.display = "block"; // Show the modal
+    // Function to show the previous question
+    function previousQuestion(questionIndex) {
+        document.getElementById(`question${questionIndex}`).style.display = "none";
+        currentQuestion = questionIndex - 1;
+
+        if (currentQuestion > 0) {
+            document.getElementById(`question${currentQuestion}`).style.display = "block";
+        }
+    }
+
+    // Function to submit the answers and show the results
+    function submitAnswers() {
+        const answers = [
+            document.getElementById("answer1").value,
+            document.getElementById("answer2").value,
+            document.getElementById("answer3").value,
+            document.getElementById("answer4").value,
+            document.getElementById("answer5").value
+        ];
+
+        let score = 0;
+        let result = [];
+
+        answers.forEach((answer, index) => {
+            if (answer) {
+                if (answer === correctAnswers[index]) {
+                    score++;
+                    result.push(`Question ${index + 1}: Correct! Your answer: <p style="color:green;">${answer}</p>`);
+                } else {
+                    result.push(`Question ${index + 1}: Incorrect. Your answer: <p style="color:red;">${answer}</p>`);
+                }
+            } else {
+                result.push(`Question ${index + 1}: No answer selected.`);
+            }
+        });
+
+        // Prepare the final result message
+        const resultElement = document.getElementById("result");
+        resultElement.innerHTML = result.join("<br/>") + `<br/><br/>Total Score: ${score}/${totalQuestions}`;
+        document.getElementById("modal").style.display = "block"; // Show the modal
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+
+
+// Store the correct answers in an array
+const correctAnswers = ["True", "False", "False", "True", "True"];
+let userAnswers = [];
+
+// Function to check the answers
+function checkText() {
+    // Collect the answers from the form
+    userAnswers[0] = document.querySelector('select[name="answer1"]').value;
+    userAnswers[1] = document.querySelector('select[name="answer2"]').value;
+    userAnswers[2] = document.querySelector('select[name="answer3"]').value;
+    userAnswers[3] = document.querySelector('select[name="answer4"]').value;
+    userAnswers[4] = document.querySelector('select[name="answer5"]').value;
+
+    // Validate that all questions are answered
+    if (userAnswers.includes(undefined) || userAnswers.includes("")) {
+        alert("Please answer all questions before submitting.");
+        return;
+    }
+
+    // Calculate the score
+    let score = 0;
+    for (let i = 0; i < correctAnswers.length; i++) {
+        if (userAnswers[i] === correctAnswers[i]) {
+            score++;
+        }
+    }
+
+    // Display the result in the modal
+    const resultText = `Great job! Remember, empathy is a skill that can be developed further. Keep practicing to enhance your ability to connect with others and navigate social situations with understanding and compassion.
+
+
+    You answered ${score} out of ${correctAnswers.length} questions correctly.
+    
+    
+    Thank you for participating! `;
+    document.getElementById("result").innerText = resultText;
+
+    // Show the modal
+    document.getElementById("modal").style.display = "block";
 }
 
 // Function to close the modal
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
+
+// Optional: If you want to submit the form after showing the modal
+document.getElementById("submitButton").addEventListener("click", function() {
+    // If you want to submit the form after validation, uncomment the line below
+    // document.forms[0].submit();
+});
+

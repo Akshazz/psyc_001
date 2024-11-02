@@ -91,14 +91,19 @@ include "include/header2.php";
 
   <div class="question-slide" id="question1">
     <label for="answer1" class="form-label">
-        <p class="no-class"><b style="color: red;">Question #1:</b> Empathy is the ability to understand and share the feelings of another person. (True/False)</p>
+        <p class="no-class"><b style="color: red;">Question #1:</b> Empathy is the ability to understand and share the feelings of another person. </p>
     </label>
     <select class="form-control" name="answer1" id="answer1" required>
         <option value="" disabled selected>Select your answer</option>
         <option value="True">True</option>
         <option value="False">False</option>
     </select>
-    <button onclick="nextQuestion(1)">Next</button>
+    <br>
+    <button class="btn btn-secondary" onclick="nextQuestion(1)">Next
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+    </svg>
+    </button>
 </div>
 
 <div class="question-slide" id="question2" style="display: none;">
@@ -110,8 +115,17 @@ include "include/header2.php";
         <option value="True">True</option>
         <option value="False">False</option>
     </select>
-    <button onclick="previousQuestion(2)">Previous</button>
-    <button onclick="nextQuestion(2)">Next</button>
+    <br>
+    <button class="btn btn-secondary" onclick="previousQuestion(2)">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+    </svg> Back 
+    </button>
+    <button class="btn btn-secondary" onclick="nextQuestion(2)">Next 
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+    </svg>
+    </button>
 </div>
 
 <div class="question-slide" id="question3" style="display: none;">
@@ -123,8 +137,16 @@ include "include/header2.php";
         <option value="True">True</option>
         <option value="False">False</option>
     </select>
-    <button onclick="previousQuestion(3)">Previous</button>
-    <button onclick="nextQuestion(3)">Next</button>
+    <br>
+    <button class="btn btn-secondary" onclick="previousQuestion(3)">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+    </svg> Back 
+    </button>
+    <button class="btn btn-secondary" onclick="nextQuestion(3)">Next 
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+    </svg>
+    </button>
 </div>
 
 <div class="question-slide" id="question4" style="display: none;">
@@ -136,8 +158,16 @@ include "include/header2.php";
         <option value="True">True</option>
         <option value="False">False</option>
     </select>
-    <button onclick="previousQuestion(4)">Previous</button>
-    <button onclick="nextQuestion(4)">Next</button>
+    <br>
+    <button class="btn btn-secondary" onclick="previousQuestion(4)">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+    </svg> Back 
+    </button>
+    <button class="btn btn-secondary" onclick="nextQuestion(4)">Next 
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+    </svg>
+    </button>
 </div>
 
 <div class="question-slide" id="question5" style="display: none;">
@@ -149,46 +179,28 @@ include "include/header2.php";
         <option value="True">True</option>
         <option value="False">False</option>
     </select>
-    <button onclick="previousQuestion(5)">Previous</button>
-    <button id="submitBtn" onclick="submitAnswers()">Submit</button>
-</div>
-
-<!-- Modal for showing results -->
-<div id="modal" style="display: none;">
-    <div id="result"></div>
-    <button onclick="closeModal()">Close</button>
-</div>
-
-
-
-  
-  <div id="navigation"><br>
-    <button type="button" class="btn btn-secondary" id="prevBtn" onclick="showPrev()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+    <br>
+    <button class="btn btn-secondary" onclick="previousQuestion(5)">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
-    </svg>
-    Back</button>
-    <button type="button" class="btn btn-secondary" id="nextBtn" onclick="showNext()">&nbsp; Next
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
-    </svg>
+    </svg> Back 
     </button>
+
+
     &nbsp;&nbsp;&nbsp;  <button type="button" class="btn btn-dark" id="submitBtn" onclick="checkText()"> Submit Now! </button>
 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-    
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
     <div id="modal" class="modal">
     <div class="modal-content">
     <span class="close-button" onclick="closeModal()">&times;</span>
 
-
+  
     <img style="display: block; margin-left: auto; margin-right: auto; width: 40%;" src="logo/logo.png" height="30%">&nbsp;&nbsp;&nbsp;
     <div class="dot-container">
     
@@ -222,7 +234,6 @@ include "include/header2.php";
     <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Continue</button>
     
     
-    
     <!-- <button id="modal" type="submit" value="submit" name="submit" class="btn btn-secondary" onclick="validateForm()"
 > Continue </button> -->
     
@@ -230,6 +241,27 @@ include "include/header2.php";
     </div>   
     </div>
     </div>
+
+
+
+    <style>
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Center modal vertically */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 10%; /* Adjust width to fit the screen */
+    max-height: 80%; /* Max height of the modal */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds */
+    word-wrap: break-word; /* Allow long words to break and wrap */
+}
+
+#result {
+    white-space: normal; /* Allow text to wrap */
+    overflow-wrap: break-word; /* Ensures words break if they are too long */
+}
+
+      </style>
 
    
     <!-- <script src="js/restriction.js" defer></script> -->

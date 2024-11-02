@@ -7,7 +7,8 @@
             <title> PSYC WEB </title>
             <link rel="stylesheet" href="css/style.css">
             <link rel="stylesheet" href="css/style2.css">
-            <script src="js/script3.js" defer></script>
+            <script src="js/script4.js" defer></script>
+            <script src="js/script.js" defer></script>
             <script src="js/spinner.js" defer></script>
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
