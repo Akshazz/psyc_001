@@ -9,13 +9,9 @@ if (isset($_POST["submit"])) {
   $answer3 = $_POST['answer3'];
   $answer4 = $_POST['answer4'];
   $answer5 = $_POST['answer5'];
-  $answer6 = $_POST['answer6'];
-  $answer7 = $_POST['answer7'];
-  $answer8 = $_POST['answer8'];
-  $answer9 = $_POST['answer9'];
-  $answer10 = $_POST['answer10'];
 
-  $sql = "INSERT INTO `questions`(`id`, `fname`,`lname`,`answer1`, `answer2`,`answer3`,`answer4`,`answer5`,`answer6`,`answer7`,`answer8`,`answer9`,`answer10`) VALUES (NULL,'$fname','$lname','$answer1','$answer2','$answer3','$answer4','$answer5','$answer6','$answer7','$answer8','$answer9','$answer10')";
+
+  $sql = "INSERT INTO `questions`(`id`, `fname`,`lname`,`answer1`, `answer2`,`answer3`,`answer4`,`answer5`) VALUES (NULL,'$fname','$lname','$answer1','$answer2','$answer3','$answer4','$answer5')";
 
  $result = mysqli_query($conn, $sql);
 
@@ -78,7 +74,7 @@ include "include/header.php";
     ?>
 <br>
 
-  <p class="none"> <b>Directions:</b> You have ten (10) questions to answer. Before you submit, please take a moment to carefully review your answers to ensure they are complete and accurate. </p>
+  <p class="none"> <b>Directions:</b> You have five (5) questions to answer. Before you submit, please take a moment to carefully review your answers to ensure they are complete and accurate. </p>
 </div>
 <div class="par">
 </div>
@@ -133,45 +129,6 @@ include "include/header.php";
     <div class="form-text">Please answer the question above.</div>
   </div>
 
-  <div class="question-slide" style="display: none;">
-    <label for="answer6" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #6:</b> Example question 6 here!</p>
-    </label>
-    <textarea class="form-control" name="answer6" id="answer6" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
-
-  <div class="question-slide" style="display: none;">
-    <label for="answer7" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #7:</b> Example question 7 here!</p>
-    </label>
-    <textarea class="form-control" name="answer7" id="answer7" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
-
-  <div class="question-slide" style="display: none;">
-    <label for="answer8" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #8:</b> Example question 8 here!</p>
-    </label>
-    <textarea class="form-control" name="answer8" id="answer8" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
-
-  <div class="question-slide" style="display: none;">
-    <label for="answer9" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #9:</b> Example question 9 here!</p>
-    </label>
-    <textarea class="form-control" name="answer9" id="answer9" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
-
-  <div class="question-slide" style="display: none;">
-    <label for="answer10" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #10:</b> Example question 10 here!</p>
-    </label>
-    <textarea class="form-control" name="answer10" id="answer10" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
   
   <div id="navigation"><br>
     <button type="button" class="btn btn-secondary" id="prevBtn" onclick="showPrev()">

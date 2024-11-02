@@ -9,13 +9,9 @@ if (isset($_POST["submit"])) {
   $answer3 = $_POST['answer3'];
   $answer4 = $_POST['answer4'];
   $answer5 = $_POST['answer5'];
-  $answer6 = $_POST['answer6'];
-  $answer7 = $_POST['answer7'];
-  $answer8 = $_POST['answer8'];
-  $answer9 = $_POST['answer9'];
-  $answer10 = $_POST['answer10'];
 
-  $sql = "INSERT INTO `questions2`(`id`, `fname`,`lname`,`answer1`, `answer2`,`answer3`,`answer4`,`answer5`,`answer6`,`answer7`,`answer8`,`answer9`,`answer10`) VALUES (NULL,'$fname','$lname','$answer1','$answer2','$answer3','$answer4','$answer5','$answer6','$answer7','$answer8','$answer9','$answer10')";
+
+  $sql = "INSERT INTO `questions2`(`id`, `fname`,`lname`,`answer1`, `answer2`,`answer3`,`answer4`,`answer5`) VALUES (NULL,'$fname','$lname','$answer1','$answer2','$answer3','$answer4','$answer5')";
 
  $result = mysqli_query($conn, $sql);
 
@@ -30,7 +26,7 @@ if (isset($_POST["submit"])) {
 ?>
 
 <?php
-include "include/header.php";
+include "include/header2.php";
 ?>
 
 <!-- Navbar -->
@@ -93,85 +89,78 @@ include "include/header.php";
   </div>
   <br>
 
-  <div class="question-slide">
+  <div class="question-slide" id="question1">
     <label for="answer1" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #1:</b> Example question 1 here! </p>
+        <p class="no-class"><b style="color: red;">Question #1:</b> Empathy is the ability to understand and share the feelings of another person. (True/False)</p>
     </label>
-    <textarea class="form-control" name="answer1" id="answer1" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
+    <select class="form-control" name="answer1" id="answer1" required>
+        <option value="" disabled selected>Select your answer</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    <button onclick="nextQuestion(1)">Next</button>
+</div>
 
-  <div class="question-slide" style="display: none;">
+<div class="question-slide" id="question2" style="display: none;">
     <label for="answer2" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #2:</b> Example question 2 here!</p>
+        <p class="no-class"><b style="color: red;">Question #2:</b> Empathy always requires you to agree with the other person’s perspective. </p>
     </label>
-    <textarea class="form-control" name="answer2" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
+    <select class="form-control" name="answer2" id="answer2" required>
+        <option value="" disabled selected>Select your answer</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    <button onclick="previousQuestion(2)">Previous</button>
+    <button onclick="nextQuestion(2)">Next</button>
+</div>
 
-  <div class="question-slide" style="display: none;">
+<div class="question-slide" id="question3" style="display: none;">
     <label for="answer3" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
+        <p class="no-class"><b style="color: red;">Question #3:</b> People who are empathetic never feel overwhelmed by the emotions of others. </p>
     </label>
-    <textarea class="form-control" name="answer3" id="answer3" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
+    <select class="form-control" name="answer3" id="answer3" required>
+        <option value="" disabled selected>Select your answer</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    <button onclick="previousQuestion(3)">Previous</button>
+    <button onclick="nextQuestion(3)">Next</button>
+</div>
 
-  <div class="question-slide" style="display: none;">
+<div class="question-slide" id="question4" style="display: none;">
     <label for="answer4" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #4:</b> Example question 4 here!</p>
+        <p class="no-class"><b style="color: red;">Question #4:</b> Empathy means putting yourself in someone else’s shoes but not necessarily taking on their emotions as your own. </p>
     </label>
-    <textarea class="form-control" name="answer4" id="answer4" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
+    <select class="form-control" name="answer4" id="answer4" required>
+        <option value="" disabled selected>Select your answer</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    <button onclick="previousQuestion(4)">Previous</button>
+    <button onclick="nextQuestion(4)">Next</button>
+</div>
 
-  <div class="question-slide" style="display: none;">
+<div class="question-slide" id="question5" style="display: none;">
     <label for="answer5" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #5:</b> Example question 5 here!</p>
+        <p class="no-class"><b style="color: red;">Question #5:</b> Showing empathy can help reduce conflicts and misunderstandings in social situations. </p>
     </label>
-    <textarea class="form-control" name="answer5" id="answer5" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
+    <select class="form-control" name="answer5" id="answer5" required>
+        <option value="" disabled selected>Select your answer</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    <button onclick="previousQuestion(5)">Previous</button>
+    <button id="submitBtn" onclick="submitAnswers()">Submit</button>
+</div>
 
-  <div class="question-slide" style="display: none;">
-    <label for="answer6" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #6:</b> Example question 6 here!</p>
-    </label>
-    <textarea class="form-control" name="answer6" id="answer6" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
+<!-- Modal for showing results -->
+<div id="modal" style="display: none;">
+    <div id="result"></div>
+    <button onclick="closeModal()">Close</button>
+</div>
 
-  <div class="question-slide" style="display: none;">
-    <label for="answer7" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #7:</b> Example question 7 here!</p>
-    </label>
-    <textarea class="form-control" name="answer7" id="answer7" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
 
-  <div class="question-slide" style="display: none;">
-    <label for="answer8" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #8:</b> Example question 8 here!</p>
-    </label>
-    <textarea class="form-control" name="answer8" id="answer8" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
 
-  <div class="question-slide" style="display: none;">
-    <label for="answer9" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #9:</b> Example question 9 here!</p>
-    </label>
-    <textarea class="form-control" name="answer9" id="answer9" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
-
-  <div class="question-slide" style="display: none;">
-    <label for="answer10" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #10:</b> Example question 10 here!</p>
-    </label>
-    <textarea class="form-control" name="answer10" id="answer10" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
-    <div class="form-text">Please answer the question above.</div>
-  </div>
   
   <div id="navigation"><br>
     <button type="button" class="btn btn-secondary" id="prevBtn" onclick="showPrev()">
@@ -185,6 +174,8 @@ include "include/header.php";
     </svg>
     </button>
     &nbsp;&nbsp;&nbsp;  <button type="button" class="btn btn-dark" id="submitBtn" onclick="checkText()"> Submit Now! </button>
+
+
     
 </div>
 </div>
