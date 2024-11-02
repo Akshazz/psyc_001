@@ -74,7 +74,7 @@ include "include/header2.php";
     ?>
     <br>
 
-    <p class="none"> <b>Directions:</b> You have ten (10) questions to answer. Before you submit, please take a moment to carefully review your answers to ensure they are complete and accurate. </p>
+    <p class="none"> <b>Directions:</b> You have five (5) questions to answer. Before you submit, please take a moment to carefully review your answers to ensure they are complete and accurate. </p>
 </div>
 <div class="par">
 </div>
@@ -231,7 +231,7 @@ include "include/header2.php";
     </script>
 
     <input type="hidden" name="submitted" value="1">
-    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Continue</button>
+    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Submit</button>
     
     
     <!-- <button id="modal" type="submit" value="submit" name="submit" class="btn btn-secondary" onclick="validateForm()"

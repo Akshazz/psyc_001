@@ -15,7 +15,7 @@ function checkText() {
 
     const emotions2 = ["losing", "pet", "family member", "sadness", "grief", "anger", "companionship", "love", "loyalty", "painful", "heartbroken", "miss", "presence", "playful nature", "big loss"];
 
-    const emotions3 = ["Complex issue", "Contributing factors", "Poverty", "Mental health", "Affordable housing", "Resilient", "Resourceful", "Obstacles", "emotions3", "Roof over head", "Food on the table", "Compassion", "Understanding", "Less fortunate", "Volunteer", "Donate", "Organizations", "Support", "Advocate", "Policies", "Root causes", "Positive impact"];
+    const emotions3 = ["complex issue", "Contributing factors", "Poverty", "Mental health", "Affordable housing", "Resilient", "Resourceful", "Obstacles", "emotions3", "Roof over head", "Food on the table", "Compassion", "Understanding", "Less fortunate", "Volunteer", "Donate", "Organizations", "Support", "Advocate", "Policies", "Root causes", "Positive impact"];
 
     const emotions4 = ["front lines", "climate change", "Acute impacts", "Urgency", "Consequences of inaction", "Human suffering", "Displacement", "Advocate", "Ethically wrong", "Responsibility to act", "Ignoring suffering", "Vulnerable populations", "Human rights"];
 

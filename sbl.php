@@ -10,7 +10,6 @@ if (isset($_POST["submit"])) {
   $answer4 = $_POST['answer4'];
   $answer5 = $_POST['answer5'];
 
-
   $sql = "INSERT INTO `questions`(`id`, `fname`,`lname`,`answer1`, `answer2`,`answer3`,`answer4`,`answer5`) VALUES (NULL,'$fname','$lname','$answer1','$answer2','$answer3','$answer4','$answer5')";
 
  $result = mysqli_query($conn, $sql);
@@ -184,7 +183,7 @@ include "include/header.php";
     </script>
 
     <input type="hidden" name="submitted" value="1">
-    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Continue</button>
+    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Submit</button>
     
     
     
@@ -199,10 +198,10 @@ include "include/header.php";
     <style>
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* Center modal vertically */
+    margin: 5% auto; /* Center modal vertically */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Adjust width to fit the screen */
+    width: 10%; /* Adjust width to fit the screen */
     max-height: 80%; /* Max height of the modal */
     overflow-y: auto; /* Enable vertical scroll if content exceeds */
     word-wrap: break-word; /* Allow long words to break and wrap */

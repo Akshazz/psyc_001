@@ -11,7 +11,7 @@ function checkText() {
     const combinedText = answer1 + " " + answer2 + " " + answer3 + " " + answer4 + " " + answer5;
 
     // Words for detection
-    const emotions = ["nervous", "scared", "lonely", "hard", "not knowing", "new"];
+    const emotions = ["empathy", "comforting", "emotional support", "compassion", "friendship", "sadness", "reassurance", "understanding", "caring gesture", "supportive relationship", "crying", "console", "angry", "anger", "happy"];
 
     const emotions2 = ["losing", "pet", "family member", "sadness", "grief", "anger", "companionship", "love", "loyalty", "painful", "heartbroken", "miss", "presence", "playful nature", "big loss"];
 
@@ -26,31 +26,31 @@ function checkText() {
     // Check for emotions
     if (emotions.some(word => combinedText.includes(word))) {
         result += `
-        <p style="color: black;"> • Your reflections highlight the importance of empathy and kindness in social settings, especially for those who are new and vulnerable. By understanding and addressing these feelings and desired actions, you can create a more inclusive and welcoming environment for everyone, including yourself. </p>`;
+        <p style="color: black;"> • Your insights emphasize the crucial role of empathy and compassion in nurturing supportive relationships. By acknowledging the emotions of those around you, especially in moments of distress, you can help create a safe and welcoming space. This approach not only benefits others but also promotes your own emotional well-being, fostering a deeper connection with the community. </p>`;
     }
 
     // Check for emotions2
     if (emotions2.some(word => combinedText.includes(word))) {
         result += `
-        <p style="color: black;"> • Your insights reveal the deep emotional impact that losing a pet can have, reflecting both the character's reaction and your personal feelings. This analysis emphasizes the importance of pets in our lives and the heartache that accompanies their loss, highlighting the need for support and understanding during such difficult times. </p>`;
+        <p style="color: black;"> • Your insights emphasize the crucial role of empathy and compassion in nurturing supportive relationships. By acknowledging the emotions of those around you, especially in moments of distress, you can help create a safe and welcoming space. This approach not only benefits others but also promotes your own emotional well-being, fostering a deeper connection with the community. </p>`;
     }
 
     // Check for emotions3
     if (emotions3.some(word => combinedText.includes(word))) {
         result += `
-        <p style="color: black;"> • Your insights reveal a significant transformation in your understanding of homelessness, moving from a simplistic view to a comprehensive awareness of its complexities. This growth in perspective not only fosters empathy but also empowers you to take meaningful action to support those affected by homelessness. Your commitment to volunteering, donating, and advocating indicates a proactive approach to making a positive impact in your community. </p>`;
+        <p style="color: black;"> • Your insights emphasize the crucial role of empathy and compassion in nurturing supportive relationships. By acknowledging the emotions of those around you, especially in moments of distress, you can help create a safe and welcoming space. This approach not only benefits others but also promotes your own emotional well-being, fostering a deeper connection with the community. </p>`;
     }
 
         // Check for emotions4
         if (emotions4.some(word => combinedText.includes(word))) {
             result += `
-            <p style="color: black;"> • Your insights reveal a significant transformation in your understanding of the relationship between Indigenous communities and climate change. This growth fosters a sense of urgency and responsibility, compelling you to advocate for ethical action and support for vulnerable populations. By recognizing the interconnectedness of environmental issues and human rights, you are equipped to engage more thoughtfully in discussions and actions regarding climate change and its far-reaching impacts. </p>`;
+            <p style="color: black;"> • Your insights emphasize the crucial role of empathy and compassion in nurturing supportive relationships. By acknowledging the emotions of those around you, especially in moments of distress, you can help create a safe and welcoming space. This approach not only benefits others but also promotes your own emotional well-being, fostering a deeper connection with the community. </p>`;
         }
 
         // Check for emotions5
         if (emotions5.some(word => combinedText.includes(word))) {
             result += `
-            <p style="color: black;"> • Your approach and strategies demonstrate effective conflict resolution skills, underscoring the importance of empathy, active communication, and collaboration in managing workplace disputes. This not only resolves immediate issues but also contributes to a healthier workplace culture in the long term. </p>`;
+            <p style="color: black;"> • Your insights emphasize the crucial role of empathy and compassion in nurturing supportive relationships. By acknowledging the emotions of those around you, especially in moments of distress, you can help create a safe and welcoming space. This approach not only benefits others but also promotes your own emotional well-being, fostering a deeper connection with the community. </p>`;
         }
 
     // If no words detected
