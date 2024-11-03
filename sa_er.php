@@ -1,5 +1,5 @@
 <?php
-include "ip_check.php";
+include "ip_check3.php";
 include "connections/connection.php";
 if (isset($_POST["submit"])) {
   $fname = $_POST['fname'];
@@ -25,7 +25,7 @@ if (isset($_POST["submit"])) {
 ?>
 
 <?php
-include "include/header.php";
+include "include/header3.php";
 ?>
 
 <!-- Navbar -->
@@ -73,7 +73,7 @@ include "include/header.php";
     ?>
     <br>
 
-  <p class="none"> <b>Directions:</b> You have Five (5) questions to answer. Before you submit, please take a moment to carefully review your answers to ensure they are complete and accurate. </p>
+  <p class="none"> <b>Directions:</b> You have five (5) questions to answer. Before you submit, please take a moment to carefully review your answers to ensure they are complete and accurate. </p>
 </div>
 <div class="par">
 </div>
@@ -91,10 +91,10 @@ include "include/header.php";
 
   <div class="question-slide">
     <label for="answer1" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #1:</b> Example question 1 here! </p>
+      <p class="no-class"> <b style="color: red;">Question #1:</b> Please provide the answers and identify the emotions. </p>
     </label>
     <div>
-    <img style="width: 200px; height: 200px" src="images/image1.png"/>
+    <img style="width: 200px; height: 200px" src="QA/emotions1.jpg"/>
     </div>
     <br>
     <textarea class="form-control" name="answer1" id="answer1" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
@@ -103,10 +103,10 @@ include "include/header.php";
 
   <div class="question-slide" style="display: none;">
     <label for="answer2" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #2:</b> Example question 2 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #2:</b> Please provide the answers and identify the emotions. </p>
     </label>
     <div>
-    <img style="width: 200px; height: 200px" src="images/image2.jpg"/>
+    <img style="width: 200px; height: 200px" src="QA/emotions2.jpg"/>
     </div>
     <br>
     <textarea class="form-control" name="answer2" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
@@ -115,10 +115,10 @@ include "include/header.php";
 
   <div class="question-slide" style="display: none;">
     <label for="answer3" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #3:</b> Please provide the answers and identify the emotions. </p>
     </label>
     <div>
-    <img style="width: 200px; height: 200px" src="images/image3.jpg"/>
+    <img style="width: 200px; height: 200px" src="QA/emotions3.jpg"/>
     </div>
     <br>
     <textarea class="form-control" name="answer3" id="answer3" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
@@ -127,10 +127,10 @@ include "include/header.php";
 
   <div class="question-slide" style="display: none;">
     <label for="answer4" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #4:</b> Example question 4 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #4:</b> Please provide the answers and identify the emotions. </p>
     </label>
     <div>
-    <img style="width: 200px; height: 200px" src="images/image4.jpg"/>
+    <img style="width: 200px; height: 200px" src="QA/emotions4.jpg"/>
     </div>
     <br>
     <textarea class="form-control" name="answer4" id="answer4" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
@@ -139,17 +139,15 @@ include "include/header.php";
 
   <div class="question-slide" style="display: none;">
     <label for="answer5" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #5:</b> Example question 5 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #5:</b> Please provide the answers and identify the emotions. </p>
     </label>
     <div>
-    <img style="width: 200px; height: 200px" src="images/image5.jpg"/>
+    <img style="width: 200px; height: 200px" src="QA/emotions5.jpg"/>
     </div>
     <br>
     <textarea class="form-control" name="answer5" id="answer5" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
   </div>
-
-  
 
   <div id="navigation"><br>
     <button type="button" class="btn btn-secondary" id="prevBtn" onclick="showPrev()">
@@ -206,7 +204,7 @@ include "include/header.php";
     </script>
 
     <input type="hidden" name="submitted" value="1">
-    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Continue</button>
+    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Submit</button>
     
     
     
@@ -219,6 +217,27 @@ include "include/header.php";
     </div>
 
    
+    <style>
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Center modal vertically */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 10%; /* Adjust width to fit the screen */
+    max-height: 80%; /* Max height of the modal */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds */
+    word-wrap: break-word; /* Allow long words to break and wrap */
+}
+
+#result {
+    white-space: normal; /* Allow text to wrap */
+    overflow-wrap: break-word; /* Ensures words break if they are too long */
+}
+
+      </style>
+
+
+
     <!-- <script src="js/restriction.js" defer></script> -->
     <script src="js/alert.js" defer></script>
 

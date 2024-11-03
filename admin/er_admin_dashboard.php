@@ -67,16 +67,7 @@ include "../connections/connection.php";
           <th scope="col">
           <p style="font-size: 10px; text-align: justify;"> <b>Questions #5:</b></th>
           <th scope="col">
-          <p style="font-size: 10px; text-align: justify;"> <b>Questions #6:</b></th>
-          <th scope="col">
-          <p style="font-size: 10px; text-align: justify;"> <b>Questions #7:</b></th>
-          <th scope="col">
-          <p style="font-size: 10px; text-align: justify;"> <b>Questions #8:</b></th>
-          <th scope="col">
-          <p style="font-size: 10px; text-align: justify;"> <b>Questions #9:</b></th>
-          <th scope="col">
-          <p style="font-size: 10px; text-align: justify;"> <b>Questions #10:</b></th>
-          <th scope="col"><p style="font-size: 15px; padding: 15px 10px;">Action</p></th>
+          <p style="font-size: 15px; padding: 15px 10px;">Action</p></th>
         </tr>
       </thead>
       <tbody>
@@ -93,11 +84,6 @@ include "../connections/connection.php";
             <td><?php echo $row["answer3"] ?></td>
             <td><?php echo $row["answer4"] ?></td>
             <td><?php echo $row["answer5"] ?></td>
-            <td><?php echo $row["answer6"] ?></td>
-            <td><?php echo $row["answer7"] ?></td>
-            <td><?php echo $row["answer8"] ?></td>
-            <td><?php echo $row["answer9"] ?></td>
-            <td><?php echo $row["answer10"] ?></td>
             <td>
           
             <!-- Working buttons!

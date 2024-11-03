@@ -90,7 +90,7 @@ include "include/header.php";
 
   <div class="question-slide">
     <label for="answer1" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #1:</b> Example question 1 here! </p>
+      <p class="no-class"> <b style="color: red;">Question #1:</b> Imagine you're the new kid at school and you don't know anyone. How would you feel? What would you want other kids to do to make you feel welcome? </p>
     </label>
     <textarea class="form-control" name="answer1" id="answer1" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -98,7 +98,7 @@ include "include/header.php";
 
   <div class="question-slide" style="display: none;">
     <label for="answer2" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #2:</b> Example question 2 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #2:</b> In the story, why did the character react that way to the loss of their pet?  How would you feel if you experienced a similar loss? </p>
     </label>
     <textarea class="form-control" name="answer2" id="answer2" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -106,7 +106,7 @@ include "include/header.php";
 
   <div class="question-slide" style="display: none;">
     <label for="answer3" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #3:</b> Example question 3 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #3:</b> After volunteering at the homeless shelter, what did you learn about the challenges faced by people experiencing homelessness? How did this experience change your perspective, and what actions could you take to support them in the future? </p>
     </label>
     <textarea class="form-control" name="answer3" id="answer3" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -114,7 +114,7 @@ include "include/header.php";
 
   <div class="question-slide" style="display: none;">
     <label for="answer4" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #4:</b> Example question 4 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #4:</b> The documentary showed the impact of climate change on indigenous communities. How does understanding their experiences inform your understanding of climate change as a global issue? What are the ethical implications of inaction in the face of such suffering? </p>
     </label>
     <textarea class="form-control" name="answer4" id="answer4" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -122,7 +122,7 @@ include "include/header.php";
 
   <div class="question-slide" style="display: none;">
     <label for="answer5" class="form-label">
-      <p class="no-class"> <b style="color: red;">Question #5:</b> Example question 5 here!</p>
+      <p class="no-class"> <b style="color: red;">Question #5:</b> During the conflict simulation, you were assigned to mediate a disagreement between two employees.  How did you approach the situation, considering the emotional needs of both individuals? What strategies did you use to build understanding and find a solution? </p>
     </label>
     <textarea class="form-control" name="answer5" id="answer5" rows="4" cols="50" placeholder="Enter your answer here!" required></textarea>
     <div class="form-text">Please answer the question above.</div>
@@ -183,7 +183,7 @@ include "include/header.php";
     </script>
 
     <input type="hidden" name="submitted" value="1">
-    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Continue</button>
+    <button type="submit" value="submit" name="submit" class="btn btn-secondary" id="submitButton" onclick="validateForm()">Submit</button>
     
     
     
@@ -194,6 +194,25 @@ include "include/header.php";
     </div>   
     </div>
     </div>
+
+    <style>
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Center modal vertically */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 10%; /* Adjust width to fit the screen */
+    max-height: 80%; /* Max height of the modal */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds */
+    word-wrap: break-word; /* Allow long words to break and wrap */
+}
+
+#result {
+    white-space: normal; /* Allow text to wrap */
+    overflow-wrap: break-word; /* Ensures words break if they are too long */
+}
+
+      </style>
 
    
     <!-- <script src="js/restriction.js" defer></script> -->
