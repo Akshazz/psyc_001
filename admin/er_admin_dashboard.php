@@ -12,6 +12,7 @@ include "../connections/connection.php";
             <meta content="width=device-width, initial-scale=1.0" name="viewport">
             <title> PSYC WEB </title>
             <link rel="stylesheet" href="../css/style.css">
+            <link rel="stylesheet" href="../css/footer.css">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -119,12 +120,10 @@ include "../connections/connection.php";
 </header>
 
 <!-- Footer -->
-<center>
-  <br>
-<div>
-      <p>© <span>Copyright</span> <strong class="px-1 sitename"> Aron N. </strong> <span>All Rights Reserved 2024</span></p>
-    </div>
-</center>
+<?php
+  echo '<br>';
+  include "../include/footer.php";
+  ?>
 
 
 <script>
